@@ -1,3 +1,3 @@
 <div class="gallery-group-main">
-{% galleryGroup '壁纸' '收藏的一些壁纸' '/gallery/wallpaper' https://bu.dusays.com/2021/03/06/38a2c5cd8b44e.jpg %}
+{% galleryGroup '萌宠' '一只笨笨的小猫' '/gallery/wallpaper' https://wei77777.github.io/gallery/index/20230103111204.jpg %}
 </div>

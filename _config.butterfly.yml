@@ -79,7 +79,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /images/favicon.ico
 
 # Avatar (頭像)
 avatar:
@@ -93,28 +93,50 @@ disable_top_img: false
 index_img: /images/t014d46a590e4d07543.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: /images/t014d46a590e4d07543.jpg
 
 # The banner image of archive page
-archive_img:
+archive_img: /images/t01ac9fe85269fd8f50.jpg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img:
+tag_img: /images/t01aaa82ef6d0f1ec87.jpg
 
 # The banner image of tag page
 # format:
 #  - tag name: xxxxx
-tag_per_img:
+tag_per_img: 
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img:
+category_img: 
 
 # The banner image of category page
 # format:
 #  - category name: xxxxx
-category_per_img:
+category_per_img: 
+
+electric_clock:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  exclude:
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: class
+    name: sticky_layout
+    index: 0
+  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+  # 和风天气key 默认是 b16a1fa0e63c46a4b8f28abfb06ae3fe
+  qweather_key: 373325b7681143dbb2342b5bfd1d08d3
+  # 高得地图web服务key 默认为 e2b04289e870b005374ee030148d64fd&s=rsv3
+  gaud_map_key: f5b88842d74a71c67413b2052c4807e5
+  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+  rectangle: 112.982279,28.19409 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
 
 cover:
   # display the cover or not (是否顯示文章封面)
@@ -586,7 +608,7 @@ ClickShowText:
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
-display_mode: light
+display_mode: dark
 
 # Beautify (美化頁面顯示)
 beautify:

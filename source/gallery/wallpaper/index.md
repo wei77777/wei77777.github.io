@@ -1,10 +1,9 @@
+---
+title: 海棠
+type: "pets"
+top_img: "gallery/index/20230103111204.jpg"
+---
+
 {% gallery %}
-![](https://i.loli.net/2019/12/25/Fze9jchtnyJXMHN.jpg)
-![](https://i.loli.net/2019/12/25/ryLVePaqkYm4TEK.jpg)
-![](https://i.loli.net/2019/12/25/gEy5Zc1Ai6VuO4N.jpg)
-![](https://i.loli.net/2019/12/25/d6QHbytlSYO4FBG.jpg)
-![](https://i.loli.net/2019/12/25/6nepIJ1xTgufatZ.jpg)
-![](https://i.loli.net/2019/12/25/E7Jvr4eIPwUNmzq.jpg)
-![](https://i.loli.net/2019/12/25/mh19anwBSWIkGlH.jpg)
-![](https://i.loli.net/2019/12/25/2tu9JC8ewpBFagv.jpg)
+![](afc76578a04d41688de29245a891720.jpg)
 {% endgallery %}
