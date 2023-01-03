@@ -117,3 +117,11 @@ search:
 aplayer:
   meting: true
   asset_inject: false
+
+bangumi:
+  enable: true 
+  vmid: 321638084
+  title: '生命不息，追番不止'
+  quote: "I wish you to become your own sun, no need to rely on who's light."
+  show: 1
+  loading: '/img/bangumi-loading.gif'

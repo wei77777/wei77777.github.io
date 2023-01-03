@@ -14,6 +14,7 @@ menu:
     分类: /categories/ || fas fa-folder-open
   清单||fa fa-heartbeat:
     相册: /gallery/ || fas fa-images
+    番剧: /bangumis/ || fas fa-images
   关于: /about/ || fas fa-heart
 
 # Hide the child menu items in mobile sidebar
@@ -155,7 +156,7 @@ cover:
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: /img/friend_404.gif
+  flink: /images/t0127f0c82a2f151104.jpg
   post_page: /img/404.jpg
 
 # A simple 404 page
@@ -886,6 +887,7 @@ inject:
     - <link rel="stylesheet" href="/css/rightMenu.css"> #右键菜单
     - <link rel="stylesheet" href="/css/universe.css"> #星空背景
     - <link rel="stylesheet" href="/css/custom.css"> #标题样式
+    - <link rel="stylesheet" href="/css/cat.css"> #猫滚动条样式
   bottom:
     - <script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script>
     - <script defer data-pjax src="/js/rightMenu.js"></script> #右键菜单
@@ -894,6 +896,8 @@ inject:
     # 星空背景
     - <canvas id="universe"></canvas>
     - <script defer src="/js/universe.js"></script>
+    #猫滚动条
+    - <script defer data-pjax src="/js/cat.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
