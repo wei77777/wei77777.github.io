@@ -14,7 +14,7 @@ menu:
     分类: /categories/ || fas fa-folder-open
   清单||fa fa-heartbeat:
     相册: /gallery/ || fas fa-images
-    番剧: /bangumis/ || fas fa-images
+    番剧: /bangumis/ || fas fa-list
   关于: /about/ || fas fa-heart
 
 # Hide the child menu items in mobile sidebar
@@ -42,9 +42,11 @@ copy:
 # formal: 
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/xxxxx || Github
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
-
+  fab fa-weixin: /images/weixin.jpg || 微信
+  fab fa-qq:  tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1399904296&website=www.oicqzone.com || QQ
+  fas fa-envelope-open-text: mailto:1399904296@qq.com || Email
+  fab fa-github: https://github.com/wei77777/wei77777.github.io || Github
+  fa fa-book-open: https://www.csdn.net/ || CSDN
 # search (搜索)
 # --------------------------------------
 
@@ -153,6 +155,7 @@ cover:
     - /images/t01ac9fe85269fd8f50.jpg
     - /images/t01f5212ba707fe7c2c.jpg
     - /images/t014d46a590e4d07543.jpg
+    - /images/t0127f0c82a2f151104.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -212,14 +215,14 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: false
+  enable: true
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+    - img: /images/03b8bffb5970437cbd55b69acbfdd02.jpg
+      link:
+      text: 微信
+    - img: /images/8d861408508eae1124969b303bb30cc.jpg
+      link:
+      text: 支付宝
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -236,7 +239,7 @@ related_post:
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
 # figcaption (圖片描述文字)
-photofigcaption: false
+photofigcaption: true
 
 # post_pagination (分頁)
 # value: 1 || 2 || false
@@ -682,11 +685,11 @@ aside:
     button:
       enable: false
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      text: github
+      link: https://github.com/wei77777/wei77777.github.io
   card_announcement:
     enable: true
-    content: 如果阅读过程中遇到了问题，那我也没办法,评论或者留言这两功能还未做,啊哈哈。
+    content: 有什么觉得改进的地方可以点击上方按钮添加博主联系方式！
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
