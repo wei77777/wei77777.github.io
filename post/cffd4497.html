@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>webpack实现前端工程化 | WEIGUOGUO</title><meta name="keywords" content="webpack"><meta name="author" content="WEIGUOGUO"><meta name="copyright" content="WEIGUOGUO"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="初始化项目 1.创建空白目录，执行 cnpm init ,填写一些基本问题后生成初始化包管理文件 packge.json 2.新建 src 源码目录 3.新建 src -&gt; index.html 文件 4.初始化首页基本结构 5.运行 npm install jquery -S 安装 jquery  安装和配置webpack 1.运行 npm install webpack webpack-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack实现前端工程化">
+<meta property="og:url" content="http://example.com/post/cffd4497.html">
+<meta property="og:site_name" content="WEIGUOGUO">
+<meta property="og:description" content="初始化项目 1.创建空白目录，执行 cnpm init ,填写一些基本问题后生成初始化包管理文件 packge.json 2.新建 src 源码目录 3.新建 src -&gt; index.html 文件 4.初始化首页基本结构 5.运行 npm install jquery -S 安装 jquery  安装和配置webpack 1.运行 npm install webpack webpack-">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/t01ac9fe85269fd8f50.jpg">
+<meta property="article:published_time" content="2021-04-12T00:59:21.000Z">
+<meta property="article:modified_time" content="2023-01-04T02:45:01.241Z">
+<meta property="article:author" content="WEIGUOGUO">
+<meta property="article:tag" content="webpack">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/t01ac9fe85269fd8f50.jpg"><link rel="shortcut icon" href="/images/favicon.ico"><link rel="canonical" href="http://example.com/post/cffd4497"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-04 10:45:01'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="https://npm.elemecdn.com/ethan4116-blog/lib/css/plane_v2.css"><link rel="stylesheet" href="/css/rightMenu.css"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/cat.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://bu.dusays.com/2022/05/02/626f92e193879.jpg" onerror="onerror=null;src='/images/t0127f0c82a2f151104.jpg'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">93</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">30</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-link"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-list"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/t01ac9fe85269fd8f50.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WEIGUOGUO</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-link"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-list"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">webpack实现前端工程化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-12T00:59:21.000Z" title="发表于 2021-04-12 08:59:21">2021-04-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-04T02:45:01.241Z" title="更新于 2023-01-04 10:45:01">2023-01-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/webpack/">webpack</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="webpack实现前端工程化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><ul>
+<li>1.创建空白目录，执行 <code>cnpm init</code> ,填写一些基本问题后生成初始化包管理文件 <code>packge.json</code></li>
+<li>2.新建 <code>src</code> 源码目录</li>
+<li>3.新建 <code>src -&gt; index.html</code> 文件</li>
+<li>4.初始化首页基本结构</li>
+<li>5.运行 <code>npm install jquery -S</code> 安装 <code>jquery</code></li>
+</ul>
+<h2 id="安装和配置webpack"><a href="#安装和配置webpack" class="headerlink" title="安装和配置webpack"></a>安装和配置webpack</h2><ul>
+<li>1.运行 <code>npm install webpack webpack-cli -S</code> 安装 <code>webpack</code> 相关包</li>
+<li>2.在根节点新建 <code>webpack.config.js</code> 文件</li>
+<li>3.在 <code>webpack.config.js</code> 文件中基本配置  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * mode：编译模式</span></span><br><span class="line"><span class="comment">    * development：开发模式，打包的出来的文件没有经过压缩，体积较大，但是打包速度快</span></span><br><span class="line"><span class="comment">    * production：生产模式，打包出来的文件经过压缩，体积小，但是打包速度慢</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&quot;development&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>4.在 <code>package.json</code> 文件的 <code>scripts</code> 节点下面新增脚本<br>  <code>&quot;dev&quot;:&quot;webpack&quot;</code></li>
+<li>5.运行 <code>npm run dev</code> 进行项目打包操作</li>
+</ul>
+<h2 id="配置打包的入口和出口"><a href="#配置打包的入口和出口" class="headerlink" title="配置打包的入口和出口"></a>配置打包的入口和出口</h2><ul>
+<li>1.<code>webpack 4.x</code> 中默认约定<br>  打包的入口文件为 <code>src -&gt; index.js</code><br>  打包的出口文件为 <code>dist -&gt; main.js</code></li>
+<li>2.在 <code>webpack.config.js</code> 文件中通过配置指定打包的入口文件和出口文件  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;    </span><br><span class="line">    <span class="comment">// 编译模式</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&quot;development&quot;</span>,    </span><br><span class="line">    <span class="comment">// 打包的入口文件，表示从此目录下进入</span></span><br><span class="line">    <span class="attr">entry</span>:path.<span class="title function_">join</span>(__dirname,<span class="string">&quot;./src/index.js&quot;</span>),    </span><br><span class="line">    <span class="comment">// 打包的出口文件</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="attr">path</span>:path.<span class="title function_">join</span>(__dirname,<span class="string">&quot;./dist&quot;</span>),</span><br><span class="line">        <span class="comment">//将js文件放在js文件夹中，并使用时间戳命名打包生成的build.js文件，保证每次打包的文件都不一样</span></span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&#x27;js/&#x27;</span> + <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>() + <span class="string">&#x27;build.js&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>3.<code>webpack.config.js</code> 上方需要引入 <code>path</code></li>
+</ul>
+<h2 id="配置-npm-install-webpack-dev-server-自动打包功能"><a href="#配置-npm-install-webpack-dev-server-自动打包功能" class="headerlink" title="配置 npm install webpack-dev-server 自动打包功能"></a>配置 npm install webpack-dev-server 自动打包功能</h2><ul>
+<li>1.运行 <code>npm install webpack-dev-server -D</code> 命令，安装支持自动打包的工具</li>
+<li>2.修改 <code>pack.json -&gt; scripts</code> 中的 <code>dev</code> 命令如下<br>  <code>&quot;dev&quot;:&quot;webpack-dev-server&quot;</code></li>
+<li>3.将 <code>src -&gt; index.html</code> 中 <code>script</code> 脚本的引用路径改为 <code>&quot;/build.js&quot;</code></li>
+<li>4.运行 <code>npm run dev 命令</code>，重新进行打包</li>
+<li>5.在浏览器中访问 <code>http:localhost:8080</code> 地址，查看打包效果</li>
+</ul>
+<p><em>注意：<code>webpack-dev-server</code> 打包生成的文件是虚拟的，看不到的，不在物理内存中，而在运存中，所以我们也可以正常访问</em></p>
+<h2 id="配置-npm-install-html-webpack-plugin-生成预览页面"><a href="#配置-npm-install-html-webpack-plugin-生成预览页面" class="headerlink" title="配置 npm install html-webpack-plugin 生成预览页面"></a>配置 npm install html-webpack-plugin 生成预览页面</h2><ul>
+<li>1.运行 <code>npm install html-webpack-plugin -D</code> 命令安装支持生成预览页面的工具</li>
+<li>2.修改 <code>webpack.config.js</code> 文件头部区域，并添加如下信息  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;html-webpack-plugin&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> htmlplugin = <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">    <span class="attr">template</span>: <span class="string">&quot;./src/vue_index.html&quot;</span>, <span class="comment">// 指定要用到的模板文件</span></span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&quot;index.html&quot;</span>, <span class="comment">// 指定生成的文件名</span></span><br><span class="line">    <span class="attr">minify</span>: &#123;</span><br><span class="line">        <span class="attr">minimize</span>: <span class="literal">true</span>, <span class="comment">// 打包为最小值</span></span><br><span class="line">        <span class="attr">removeComments</span>: <span class="literal">true</span>, <span class="comment">// 去除注释</span></span><br><span class="line">        <span class="attr">collapseWhitespace</span>: <span class="literal">true</span>, <span class="comment">// 去除空格</span></span><br><span class="line">        <span class="attr">minifyJS</span>: <span class="literal">true</span> <span class="comment">// 压缩html内的js代码       </span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">hash</span>: <span class="literal">true</span> <span class="comment">// 加上哈希值避免缓存</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>3.修改 <code>webpack.config.js</code> 文件增加以下节点<br>  <code>plugins:[ htmlplugin ]</code></li>
+</ul>
+<h2 id="配置自动打包的相关参数"><a href="#配置自动打包的相关参数" class="headerlink" title="配置自动打包的相关参数"></a>配置自动打包的相关参数</h2><ul>
+<li>1.在 <code>package.json</code> 的 <code>scripts</code> 节点下修改 <code>dev</code> 的配置如下<br>  <code>&quot;dev&quot;: &quot;webpack-dev-server --open --host 127.0.0.1 --port 8888&quot;</code></li>
+<li>2.<code>--open</code> 打包完成后自动打开浏览器</li>
+<li>3.<code>--host 127.0.0.1</code> 在指定的域名下打开页面</li>
+<li>4.<code>--port 8888</code> 在指定的端口打开页面</li>
+</ul>
+<h2 id="配置加载器处理-css-文件"><a href="#配置加载器处理-css-文件" class="headerlink" title="配置加载器处理 css 文件"></a>配置加载器处理 css 文件</h2><ul>
+<li>1.运行 <code>npm install style-loader css-loader -S</code> 安装处理 <code>css</code> 的工具</li>
+<li>2.在 <code>webpack.config.js</code> 文件中 <code>module -&gt; rules</code> 数组中添加如下配置  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>:&#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&quot;style-loader&quot;</span>, <span class="string">&quot;css-loader&quot;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure></li>
+<li>3.在 <code>src -&gt; css</code> 文件下新建 <code>1.css</code> 文件</li>
+<li>4.在 <code>index.js</code> 文件中引入 <code>1.css</code></li>
+<li>5.重新启动项目，可以看到正确的加载了 <code>css</code> 文件</li>
+</ul>
+<h2 id="配置加载器处理-less-文件"><a href="#配置加载器处理-less-文件" class="headerlink" title="配置加载器处理 less 文件"></a>配置加载器处理 less 文件</h2><ul>
+<li>1.运行 <code>npm istall less-loader less -S</code> 安装处理 <code>less</code> 的文件，其中 <code>less</code> 是 <code>less-loader</code> 的内置依赖</li>
+<li>2.在 <code>webpack.config.js</code> 文件中 <code>module -&gt; rules</code> 数组中添加如下配置  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>:&#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.less$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&quot;style-loader&quot;</span>, <span class="string">&quot;css-loader&quot;</span>,<span class="string">&quot;less-loader&quot;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>3.在 <code>src -&gt; css</code> 文件下新建 <code>1.less</code> 文件</li>
+<li>4.在 <code>index.js</code> 文件中引入 <code>1.less</code></li>
+<li>5.重新启动项目，可以看到正确的加载了 <code>less</code> 文件</li>
+</ul>
+<h2 id="配置加载器处理-scss-文件"><a href="#配置加载器处理-scss-文件" class="headerlink" title="配置加载器处理 scss 文件"></a>配置加载器处理 scss 文件</h2><ul>
+<li>1.运行 <code>npm install sass-loader node-sass -S</code></li>
+<li>2.在 <code>webpack.config.js</code> 文件中 <code>module -&gt; rules</code> 数组中添加如下配置  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>:&#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.scss$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&quot;style-loader&quot;</span>, <span class="string">&quot;css-loader&quot;</span>,<span class="string">&quot;sass-loader&quot;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>3.在 <code>src -&gt; css</code> 文件下新建 <code>1.scss</code> 文件</li>
+<li>4.在 <code>index.js</code> 文件中引入 <code>1.scss</code></li>
+<li>5.重新启动项目，可以看到正确的加载了 <code>scss</code> 文件</li>
+</ul>
+<h2 id="配置-postcss-自定添加-css-的兼容前缀"><a href="#配置-postcss-自定添加-css-的兼容前缀" class="headerlink" title="配置 postcss 自定添加 css 的兼容前缀"></a>配置 postcss 自定添加 css 的兼容前缀</h2><ul>
+<li>1.运行 <code>cnpm install postcss-loader autoprefixer -S</code></li>
+<li>2.在项目根目录下创建 <code>postcss.config.js</code> 并初始化以下配置  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> autoprefixer = <span class="built_in">require</span>(<span class="string">&quot;autoprefixer&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">plugins</span>:[ autoprefixer ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>3.在 <code>webpack.config.js</code> 的 <code>module -&gt; rules</code> 数组中，修改 <code>css-loader</code> 的规则  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>:&#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</span><br><span class="line">            <span class="attr">use</span>: [<span class="string">&quot;style-loader&quot;</span>, <span class="string">&quot;css-loader&quot;</span>,<span class="string">&quot;postcss-loader&quot;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>4.重新运行项目，可以自动兼容不同的浏览器</li>
+</ul>
+<h2 id="配置-babel-loader-使-webpack-兼容-js-高级语法"><a href="#配置-babel-loader-使-webpack-兼容-js-高级语法" class="headerlink" title="配置 babel-loader 使 webpack 兼容 js 高级语法"></a>配置 babel-loader 使 webpack 兼容 js 高级语法</h2><ul>
+<li>1.运行 <code>cnpm install babel-loader @babel/core @babel/runtime -S</code> 安装相关工具</li>
+<li>2.运行 <code>cnpm install @babel/preset-env @babel/plugin-transform-runtime @babel/plugin-proposal-class-properties -S</code> 安装相关工具</li>
+<li>3.在根节点新建 <code>babel.config.js</code> 并进行如下配置  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">presets</span>:[ <span class="string">&#x27;@babel/preset-env&#x27;</span> ],</span><br><span class="line">    <span class="attr">plugins</span>:[ <span class="string">&#x27;@babel/plugin-transform-runtime&#x27;</span>,<span class="string">&#x27;@babel/plugin-proposal-class-properties&#x27;</span> ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>4.在 <code>webpack.config.js -&gt; rules</code> 数组中添加以下规则  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>:&#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</span><br><span class="line">            <span class="attr">use</span>: <span class="string">&#x27;babel-loader&#x27;</span>,</span><br><span class="line">            <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><ol start="5">
+<li><code>exclude</code> 的作用过滤某个文件夹，过滤 <code>node_modules</code> 文件夹</li>
+</ol>
+</li>
+</ul>
+<h2 id="使用-url-loader-file-loader-处理图片和字体文件"><a href="#使用-url-loader-file-loader-处理图片和字体文件" class="headerlink" title="使用 url-loader file-loader 处理图片和字体文件"></a>使用 url-loader file-loader 处理图片和字体文件</h2><ul>
+<li>1.运行 <code>cnpm install url-loader file-loader -S</code></li>
+<li>2.在 <code>webpack.config.js -&gt; rules</code> 数组中添加以下规则  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>:&#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>: <span class="regexp">/\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/</span>,</span><br><span class="line">            <span class="attr">use</span>: <span class="string">&#x27;url-loader?limit=37109&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>3.其中 <code>|</code> 表示或者的意思, <code>?</code> 表示 <code>limit</code> 后面的参数</li>
+<li>4.<code>limit</code> 用来指定图片的大小，单位是字节，只有小于 <code>limit</code> 大小的图片，会被转为 <code>base64</code></li>
+<li>5.不添加 <code>limit</code> 参数时会自动将图片转换为 <code>base64</code></li>
+</ul>
+<h2 id="HotModuleReplacementPlugin-模块热更新"><a href="#HotModuleReplacementPlugin-模块热更新" class="headerlink" title="HotModuleReplacementPlugin 模块热更新"></a>HotModuleReplacementPlugin 模块热更新</h2><p>此功能为 webpack 自带功能，无需引入额外插件,直接在 <code>webpack.config.js</code> 中加入下面代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">&#x27;webpack&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">HotModule</span> = <span class="keyword">new</span> webpack.<span class="title class_">HotModuleReplacementPlugin</span>()</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;    </span><br><span class="line">    <span class="attr">plugins</span>: [ <span class="title class_">HotModule</span> ]  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="clean-webpack-plugin-清理上一次打包的文件夹并生成新的打包文件"><a href="#clean-webpack-plugin-清理上一次打包的文件夹并生成新的打包文件" class="headerlink" title="clean-webpack-plugin 清理上一次打包的文件夹并生成新的打包文件"></a>clean-webpack-plugin 清理上一次打包的文件夹并生成新的打包文件</h2><ul>
+<li>1.运行 <code>cnpm install clean-webpack-plugin -S</code> 安装相关插件</li>
+<li>2.<code>webpack.config.js</code> 中直接加入下面代码  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">CleanWebpackPlugin</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;clean-webpack-plugin&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> cleanbuild = <span class="keyword">new</span> <span class="title class_">CleanWebpackPlugin</span>()</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;    </span><br><span class="line">    <span class="attr">plugins</span>: [ cleanbuild ]  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="mini-css-extract-plugin-将-CSS-提取为独立的文件的插件，对每个包含-css-的-js-文件都会创建一个-CSS-文件"><a href="#mini-css-extract-plugin-将-CSS-提取为独立的文件的插件，对每个包含-css-的-js-文件都会创建一个-CSS-文件" class="headerlink" title="mini-css-extract-plugin 将 CSS 提取为独立的文件的插件，对每个包含 css 的 js 文件都会创建一个 CSS 文件"></a>mini-css-extract-plugin 将 CSS 提取为独立的文件的插件，对每个包含 css 的 js 文件都会创建一个 CSS 文件</h2><ul>
+<li><p>1.运行 <code>cnpm install mini-css-extract-plugin -S</code> 安装相关插件</p>
+</li>
+<li><p>2.在<code>webpack.config.js</code>中配置如下代码</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">MiniCssExtractPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;mini-css-extract-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ExtractTextPlugin</span> = <span class="keyword">new</span> <span class="title class_">MiniCssExtractPlugin</span>(&#123;</span><br><span class="line">    <span class="comment">// 生成的css文件放置地址以及文件名</span></span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&#x27;css/[name].css&#x27;</span>,</span><br><span class="line">    <span class="attr">chunkFilename</span>: <span class="string">&#x27;css/[id].css&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>3.修改 <code>module -&gt; rules</code> 的 <code>css-loader</code></p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;    </span><br><span class="line">    <span class="attr">plugins</span>: [ <span class="title class_">ExtractTextPlugin</span> ],</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [&#123;</span><br><span class="line">                <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</span><br><span class="line">                <span class="attr">use</span>: [<span class="string">&quot;style-loader&quot;</span>, &#123;</span><br><span class="line">                    <span class="attr">loader</span>: <span class="title class_">MiniCssExtractPlugin</span>.<span class="property">loader</span>,</span><br><span class="line">                    <span class="attr">options</span>: &#123;</span><br><span class="line">                        <span class="comment">// 这里可以指定一个 publicPath</span></span><br><span class="line">                        <span class="comment">// 默认使用 webpackOptions.output中的publicPath</span></span><br><span class="line">                        <span class="attr">publicPath</span>: <span class="string">&#x27;../&#x27;</span></span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;, <span class="string">&quot;css-loader&quot;</span>, <span class="string">&quot;postcss-loader&quot;</span>]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="optimize-css-assets-webpack-plugin-压缩打包生成的-css-代码"><a href="#optimize-css-assets-webpack-plugin-压缩打包生成的-css-代码" class="headerlink" title="optimize-css-assets-webpack-plugin 压缩打包生成的 css 代码"></a>optimize-css-assets-webpack-plugin 压缩打包生成的 css 代码</h2><ul>
+<li>1.运行 <code>cnpm install optimize-css-assets-webpack-plugin -S</code> 安装相关插件</li>
+<li>2.在 <code>webpack.config.js</code> 中配置如下代码  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">OptimizeCSSAssetsPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;optimize-css-assets-webpack-plugin&quot;</span>)</span><br><span class="line"><span class="keyword">const</span> optimizecssplugin = <span class="keyword">new</span> <span class="title class_">OptimizeCSSAssetsPlugin</span>();</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;    </span><br><span class="line">    <span class="attr">plugins</span>: [ optimizecssplugin ]  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="copy-webpack-plugin-自动拷贝项目中引用的静态文件"><a href="#copy-webpack-plugin-自动拷贝项目中引用的静态文件" class="headerlink" title="copy-webpack-plugin 自动拷贝项目中引用的静态文件"></a>copy-webpack-plugin 自动拷贝项目中引用的静态文件</h2><p>无需引入，直接使用，在 <code>webpack.config.js</code> 中配置如下代码</p>
+<ul>
+<li>form：表示从哪个文件夹下拷贝内容</li>
+<li>to:将内容粘贴到哪个文件夹下</li>
+<li>如果有多个静态文件需要拷贝，就在 patterns 数组中写多个 form to<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">CopyWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;copy-webpack-plugin&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> copyplugin = <span class="keyword">new</span> <span class="title class_">CopyWebpackPlugin</span>(&#123;</span><br><span class="line">    <span class="attr">patterns</span>: [</span><br><span class="line">        &#123;            </span><br><span class="line">            <span class="attr">from</span>: path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;./src/lib&#x27;</span>), </span><br><span class="line">            <span class="attr">to</span>: path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;./dist/lib&#x27;</span>)</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">from</span>:path.<span class="title function_">join</span>(__dirname,<span class="string">&quot;./src/img&quot;</span>),</span><br><span class="line">            <span class="attr">to</span>:path.<span class="title function_">join</span>(__dirname,<span class="string">&quot;./dist/img&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;    </span><br><span class="line">    <span class="attr">plugins</span>: [ copyplugin ]  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="使用-webpack-下载-vue-3-0-体验最新-vue"><a href="#使用-webpack-下载-vue-3-0-体验最新-vue" class="headerlink" title="使用 webpack 下载 vue 3.0 体验最新 vue"></a>使用 webpack 下载 vue 3.0 体验最新 vue</h2><ul>
+<li>1.运行 <code>cnpm install vue@next -S</code></li>
+<li>2.运行 <code>cnpm install vue-loader@next @vue/compiler-sfc -S</code> 安装 <code>vue.js</code> 单文件组件的加载器</li>
+<li>3.在 <code>webpack.config.js</code> 头部引入 <code>vue-loader</code>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;<span class="title class_">VueLoaderPlugin</span>&#125; = <span class="built_in">require</span>(<span class="string">&quot;vue-loader&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> vueplugin = <span class="keyword">new</span> <span class="title class_">VueLoaderPlugin</span>(); </span><br></pre></td></tr></table></figure></li>
+<li>4.在 <code>plugins</code> 数组中添加 <code>vueplugin</code> 元素  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins</span>: [ vueplugin ]</span><br></pre></td></tr></table></figure></li>
+<li>5.在 <code>webpack.config.js -&gt; rules</code> 数组中添加以下规则  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>:&#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">test</span>:<span class="regexp">/\.vue$/</span>,</span><br><span class="line">            <span class="attr">use</span>:<span class="string">&quot;vue-loader&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>6.新建 <code>src -&gt; vue_index.js</code> 文件并初始化以下配置  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>7.新建 <code>src -&gt; main.js</code> 文件并初始化以下配置  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;createApp&#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&quot;./App.vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>);</span><br><span class="line">app.<span class="title function_">mount</span>(<span class="string">&quot;#app&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>8.新建 <code>src -&gt; App.vue</code> 文件，在此文件中可以编写 <code>vue3.0</code> 的代码了</li>
+<li>9.修改 <code>webpack.config.js</code> 的打包入口文件地址为 <code>main.js</code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">entry</span>: path.<span class="title function_">join</span>(__dirname, <span class="string">&quot;./src/main.js&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>10.修改 <code>webpack.config.js</code> 的预览页面指定模板文件地址为 <code>vue_index.html</code>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> htmlplugin = <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">    <span class="attr">template</span>: <span class="string">&quot;./src/vue_index.html&quot;</span>, <span class="comment">// 指定要用到的模板文件</span></span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&quot;index.html&quot;</span> <span class="comment">// 指定生成的文件名</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>11.重新启动即可</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">WEIGUOGUO</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/post/cffd4497.html">http://example.com/post/cffd4497.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">WEIGUOGUO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/webpack/">webpack</a></div><div class="post_share"><div class="social-share" data-image="/images/t01ac9fe85269fd8f50.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/03b8bffb5970437cbd55b69acbfdd02.jpg" target="_blank"><img class="post-qr-code-img" src="/images/03b8bffb5970437cbd55b69acbfdd02.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/8d861408508eae1124969b303bb30cc.jpg" target="_blank"><img class="post-qr-code-img" src="/images/8d861408508eae1124969b303bb30cc.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/51525e5e.html"><img class="prev-cover" src="/images/t0127f0c82a2f151104.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">常用的快捷键操作</div></div></a></div><div class="next-post pull-right"><a href="/post/54a6d072.html"><img class="next-cover" src="/images/t01f5212ba707fe7c2c.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">koa2+mock实现一个数据服务器</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://bu.dusays.com/2022/05/02/626f92e193879.jpg" onerror="this.onerror=null;this.src='/images/t0127f0c82a2f151104.jpg'" alt="avatar"/><div class="author-info__name">WEIGUOGUO</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">93</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">30</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="/images/weixin.jpg" target="_blank" title="微信"><i class="fab fa-weixin"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=1399904296&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="mailto:1399904296@qq.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a><a class="social-icon" href="https://github.com/wei77777/wei77777.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.csdn.net/" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">有什么觉得改进的地方可以点击上方按钮添加博主联系方式！</div></div><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><script src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/twopeople1.js"></script><script src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/zdog.dist.js"></script><script id="rendered-js" src="https://npm.elemecdn.com/ethan4116-blog/lib/js/other/two-people/twopeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEwebpack"><span class="toc-number">2.</span> <span class="toc-text">安装和配置webpack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%89%93%E5%8C%85%E7%9A%84%E5%85%A5%E5%8F%A3%E5%92%8C%E5%87%BA%E5%8F%A3"><span class="toc-number">3.</span> <span class="toc-text">配置打包的入口和出口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-npm-install-webpack-dev-server-%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85%E5%8A%9F%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">配置 npm install webpack-dev-server 自动打包功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-npm-install-html-webpack-plugin-%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E9%A1%B5%E9%9D%A2"><span class="toc-number">5.</span> <span class="toc-text">配置 npm install html-webpack-plugin 生成预览页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85%E7%9A%84%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">配置自动打包的相关参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%A4%84%E7%90%86-css-%E6%96%87%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">配置加载器处理 css 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%A4%84%E7%90%86-less-%E6%96%87%E4%BB%B6"><span class="toc-number">8.</span> <span class="toc-text">配置加载器处理 less 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%A4%84%E7%90%86-scss-%E6%96%87%E4%BB%B6"><span class="toc-number">9.</span> <span class="toc-text">配置加载器处理 scss 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-postcss-%E8%87%AA%E5%AE%9A%E6%B7%BB%E5%8A%A0-css-%E7%9A%84%E5%85%BC%E5%AE%B9%E5%89%8D%E7%BC%80"><span class="toc-number">10.</span> <span class="toc-text">配置 postcss 自定添加 css 的兼容前缀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-babel-loader-%E4%BD%BF-webpack-%E5%85%BC%E5%AE%B9-js-%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95"><span class="toc-number">11.</span> <span class="toc-text">配置 babel-loader 使 webpack 兼容 js 高级语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-url-loader-file-loader-%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87%E5%92%8C%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6"><span class="toc-number">12.</span> <span class="toc-text">使用 url-loader file-loader 处理图片和字体文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HotModuleReplacementPlugin-%E6%A8%A1%E5%9D%97%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="toc-number">13.</span> <span class="toc-text">HotModuleReplacementPlugin 模块热更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clean-webpack-plugin-%E6%B8%85%E7%90%86%E4%B8%8A%E4%B8%80%E6%AC%A1%E6%89%93%E5%8C%85%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%E5%B9%B6%E7%94%9F%E6%88%90%E6%96%B0%E7%9A%84%E6%89%93%E5%8C%85%E6%96%87%E4%BB%B6"><span class="toc-number">14.</span> <span class="toc-text">clean-webpack-plugin 清理上一次打包的文件夹并生成新的打包文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mini-css-extract-plugin-%E5%B0%86-CSS-%E6%8F%90%E5%8F%96%E4%B8%BA%E7%8B%AC%E7%AB%8B%E7%9A%84%E6%96%87%E4%BB%B6%E7%9A%84%E6%8F%92%E4%BB%B6%EF%BC%8C%E5%AF%B9%E6%AF%8F%E4%B8%AA%E5%8C%85%E5%90%AB-css-%E7%9A%84-js-%E6%96%87%E4%BB%B6%E9%83%BD%E4%BC%9A%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-CSS-%E6%96%87%E4%BB%B6"><span class="toc-number">15.</span> <span class="toc-text">mini-css-extract-plugin 将 CSS 提取为独立的文件的插件，对每个包含 css 的 js 文件都会创建一个 CSS 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#optimize-css-assets-webpack-plugin-%E5%8E%8B%E7%BC%A9%E6%89%93%E5%8C%85%E7%94%9F%E6%88%90%E7%9A%84-css-%E4%BB%A3%E7%A0%81"><span class="toc-number">16.</span> <span class="toc-text">optimize-css-assets-webpack-plugin 压缩打包生成的 css 代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copy-webpack-plugin-%E8%87%AA%E5%8A%A8%E6%8B%B7%E8%B4%9D%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%BC%95%E7%94%A8%E7%9A%84%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="toc-number">17.</span> <span class="toc-text">copy-webpack-plugin 自动拷贝项目中引用的静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-webpack-%E4%B8%8B%E8%BD%BD-vue-3-0-%E4%BD%93%E9%AA%8C%E6%9C%80%E6%96%B0-vue"><span class="toc-number">18.</span> <span class="toc-text">使用 webpack 下载 vue 3.0 体验最新 vue</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/f1f5c861.html" title="文件上传到腾讯云COS"><img src="/images/t014d46a590e4d07543.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文件上传到腾讯云COS"/></a><div class="content"><a class="title" href="/post/f1f5c861.html" title="文件上传到腾讯云COS">文件上传到腾讯云COS</a><time datetime="2022-07-19T08:20:25.000Z" title="发表于 2022-07-19 16:20:25">2022-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/43fd2e45.html" title="Spring注解开发"><img src="/images/t0127f0c82a2f151104.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring注解开发"/></a><div class="content"><a class="title" href="/post/43fd2e45.html" title="Spring注解开发">Spring注解开发</a><time datetime="2022-07-13T14:35:36.000Z" title="发表于 2022-07-13 22:35:36">2022-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/fb8105ee.html" title="将数据转成树形结构"><img src="/images/t0127f0c82a2f151104.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="将数据转成树形结构"/></a><div class="content"><a class="title" href="/post/fb8105ee.html" title="将数据转成树形结构">将数据转成树形结构</a><time datetime="2022-07-13T06:55:29.000Z" title="发表于 2022-07-13 14:55:29">2022-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/8ea1e72d.html" title="SSM整合案例"><img src="/images/t01aaa82ef6d0f1ec87.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SSM整合案例"/></a><div class="content"><a class="title" href="/post/8ea1e72d.html" title="SSM整合案例">SSM整合案例</a><time datetime="2022-07-03T14:48:00.000Z" title="发表于 2022-07-03 22:48:00">2022-07-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/4658a061.html" title="MyBatis入门"><img src="/images/t014d46a590e4d07543.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyBatis入门"/></a><div class="content"><a class="title" href="/post/4658a061.html" title="MyBatis入门">MyBatis入门</a><time datetime="2022-06-27T15:10:56.000Z" title="发表于 2022-06-27 23:10:56">2022-06-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/images/t01ac9fe85269fd8f50.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> WEIGUOGUO</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light.<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="fa-solid fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="fa-solid fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="fa-solid fa-arrow-rotate-right"></i></div><div class="rightMenu-item" id="menu-home"><i class="fa-solid fa-house"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" href="/archives/"><i class="fa-solid fa-archive"></i><span>文章归档</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="fa-solid fa-folder-open"></i><span>文章分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="fa-solid fa-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuNormal"><a class="rightMenu-item menu-link" id="menu-radompage" href="/random/index.html"><i class="fa-solid fa-shoe-prints"></i><span>随便逛逛</span></a><div class="rightMenu-item" id="menu-translate"><i class="fa-solid fa-earth-asia"></i><span>繁简切换</span></div><div class="rightMenu-item" id="menu-darkmode"><i class="fa-solid fa-moon"></i><span>切换模式</span></div><div class="rightMenu-item" id="menu-print"><i class="fa-solid fa-print fa-fw"></i><span>打印页面</span></div></div></div><div id="rightmenu-mask"></div><div id="myscoll"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script></div><script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script defer data-pjax src="/js/rightMenu.js"></script><div class="aplayer no-destroy" data-id="6960742120"  data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random"  data-preload="none" data-autoplay="true" muted></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script defer data-pjax src="/js/cat.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = '373325b7681143dbb2342b5bfd1d08d3';
+  var gaud_map_key = 'f5b88842d74a71c67413b2052c4807e5';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>
