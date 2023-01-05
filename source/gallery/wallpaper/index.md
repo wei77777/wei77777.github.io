@@ -1,7 +1,7 @@
 ---
 title: 海棠
 type: "pets"
-top_img: "gallery/index/20230103111204.jpg"
+top_img: "gallery/wallpaper/index/20230103111204.jpg"
 ---
 
 {% gallery %}
