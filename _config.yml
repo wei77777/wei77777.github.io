@@ -125,3 +125,6 @@ bangumi:
   quote: "I wish you to become your own sun, no need to rely on who's light."
   show: 1
   loading: '/img/bangumi-loading.gif'
+
+encrypt:
+  enable: true
