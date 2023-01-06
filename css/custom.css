@@ -263,3 +263,11 @@ figure.highlight pre .addition {
     }
     
 }
+
+.hbe-input-label-default .hbe-input-label-content-default{
+    color: red;
+}
+
+.hbe-input-label-default .hbe-input-label-content-default{
+    color: red !important;
+}
