@@ -4,6 +4,7 @@ tags: git
 categories: git常用操作
 abbrlink: c73a59f9
 date: 2021-01-14 00:00:00
+swiper_index: 4 #置顶轮播图顺序，非负整数，数字越大越靠前
 ---
 
 {% note info no-icon %}

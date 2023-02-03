@@ -6,6 +6,7 @@ tags:
 categories: []
 abbrlink: 4318ddf
 date: 2021-05-10 16:12:00
+swiper_index: 2 #置顶轮播图顺序，非负整数，数字越大越靠前
 ---
 
 原文来自微信公众号：Vue中文社区

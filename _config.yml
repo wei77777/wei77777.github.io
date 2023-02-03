@@ -143,3 +143,6 @@ lazyload:
   onlypost: false # optional
   loadingImg: # optional eg ./images/loading.gif
   isSPA: true # optional
+
+butterfly_article_double_row:
+  enable: true
