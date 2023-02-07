@@ -64,7 +64,7 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  微信: /images/weixin.jpg || icon-weixin
+  微信: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/weixin.jpg || icon-weixin
   QQ: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1399904296&website=www.oicqzone.com || icon-QQ
   Github: https://github.com/wei77777/wei77777.github.io || icon-github
   网易云: https://music.163.com/#/my/m/music/playlist?id=2186676855 || icon-wangyiyunyinle
@@ -103,7 +103,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /images/favicon.ico
+favicon: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/favicon.ico
 
 # Avatar (頭像)
 avatar:
@@ -114,17 +114,17 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: /images/t01f5212ba707fe7c2c.jpg
+index_img: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/t01f5212ba707fe7c2c.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: /images/t014d46a590e4d07543.jpg
+default_top_img: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/t014d46a590e4d07543.jpg
 
 # The banner image of archive page
-archive_img: /images/t01ac9fe85269fd8f50.jpg
+archive_img: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/t01ac9fe85269fd8f50.jpg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: /images/t01aaa82ef6d0f1ec87.jpg
+tag_img: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/t01aaa82ef6d0f1ec87.jpg
 
 # The banner image of tag page
 # format:
@@ -181,7 +181,7 @@ cover:
     - https://source.unsplash.com/random/1920x1080/
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: /images/t0127f0c82a2f151104.jpg
+  flink: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/t0127f0c82a2f151104.jpg
   post_page: /img/404.jpg
 
 # A simple 404 page
@@ -240,10 +240,10 @@ reward:
   enable: true
   coinAudio: https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a
   QR_code:
-    - img: /images/03b8bffb5970437cbd55b69acbfdd02.jpg
+    - img: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/03b8bffb5970437cbd55b69acbfdd02.jpg
       link:
       text: 微信
-    - img: /images/8d861408508eae1124969b303bb30cc.jpg
+    - img: https://cdn.staticaly.com/gh/wei77777/DrawingBed@main/img/8d861408508eae1124969b303bb30cc.jpg
       link:
       text: 支付宝
 
