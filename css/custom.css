@@ -1,3 +1,29 @@
+@font-face {
+  /* 为载入的字体取名字(随意) */
+  font-family: 'YSHST';	
+  /* 字体文件地址(相对或者绝对路径都可以) */
+  src: url('../font/LXGWWenKaiGB-Bold.ttf');
+  /* 定义加粗样式(加粗多少) */
+  font-weight: bold;
+  /* 定义字体样式(斜体/非斜体) */
+  font-style: normal;
+  /* 定义显示样式 */
+  font-display: block;
+}
+
+@import "//at.alicdn.com/t/font_2264842_b004iy0kk2b.css";
+svg.icon {
+  width: 1.28em;
+  height: 1.28em;
+  vertical-align: -0.3em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.fa-chevron-down{
+  margin-left: 5px;
+}
+
 #article-container h1:before,
 #article-container h2:before,
 #article-container h3:before,
@@ -823,8 +849,8 @@ div#archive {
 #fps {
   position: fixed;
   /* 指定位置 */
-  left: 10px;
-  bottom: 120px;
+  right: 0;
+  bottom: 0;
   z-index: 1919810;
 }
 [data-theme="light"] #fps {
@@ -1072,13 +1098,6 @@ translate:-50%;
   background-color: rgba(0, 0, 0, .1);
 }
 
-
-/* 翻页按钮居中 */
-#pagination {
-  width: 100%;
-  margin: auto;
-}
-
 /* 日间模式不生效 */
 [data-theme="light"] #site-name,
 [data-theme="light"] #site-title,
@@ -1195,4 +1214,15 @@ translate:-50%;
   100% {
     text-shadow: #5636ed 0 0 5px;
   }
+}
+
+
+/* 欢迎信息 */
+#welcome-info {
+  background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
+  border-radius: 18px;
+  padding: 8px;
+}
+[data-theme="dark"] #welcome-info {
+  background: #212121;
 }
