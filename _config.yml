@@ -144,5 +144,39 @@ lazyload:
   loadingImg: # optional eg ./images/loading.gif
   isSPA: true # optional
 
-butterfly_article_double_row:
+magnet:
   enable: true
+  priority: 1
+  enable_page: /
+  type: categories
+  devide: 2
+  display:
+    - name: 微信开发
+      display_name: WEIGUOGUOの学习教程
+      icon: 📚
+    - name: 项目搭建
+      display_name:  WEIGUOGUOの项目搭建
+      icon: 🎮
+    - name: 后端知识
+      display_name:  WEIGUOGUOの编程知识
+      icon: 🐱‍👓
+    - name: Echarts
+      display_name:  WEIGUOGUOの插件学习
+      icon: 👩‍💻
+    - name: Hexo使用与部署
+      display_name:  WEIGUOGUOの博客框架
+      icon: 📒
+    - name: vsCode好用的插件
+      display_name:  WEIGUOGUOの应用工具
+      icon: 💡
+  color_setting:
+    text_color: black
+    text_hover_color: white
+    background_color: "#f2f2f2"
+    background_hover_color: "#b30070"
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
+  plus_style: ""
