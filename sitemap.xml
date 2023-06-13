@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/box/animation/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
@@ -38,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/box/gallery/index.html</loc>
+    <loc>https://wei77777.github.io/tags/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -65,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/life/movies/index.html</loc>
+    <loc>https://wei77777.github.io/box/gallery/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -75,6 +66,15 @@
   
   <url>
     <loc>https://wei77777.github.io/life/music/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/life/movies/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -173,13 +173,6 @@
 
   
   <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
-    <lastmod>2023-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/tags/Markdown/</loc>
     <lastmod>2023-06-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -193,17 +186,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <lastmod>2023-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://wei77777.github.io/categories/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84CSS/</loc>
+    <loc>https://wei77777.github.io/categories/%E6%BC%94%E7%A4%BA/</loc>
     <lastmod>2023-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/%E6%BC%94%E7%A4%BA/</loc>
+    <loc>https://wei77777.github.io/categories/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84CSS/</loc>
     <lastmod>2023-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
