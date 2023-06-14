@@ -9778,6 +9778,7 @@ body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time
   body:has(#anMusic-page) #content-inner,
   body:has(#anMusic-page) #page {
     z-index: auto;
+    display: none;
   }
   /* 歌曲列表 */
   #anMusic-page .aplayer-list {
