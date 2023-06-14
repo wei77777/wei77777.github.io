@@ -9769,6 +9769,12 @@ body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time
   body:has(#anMusic-page) #rightside {
     display: none;
   }
+
+  body:has(#anMusic-page) #footer,
+  body:has(#anMusic-page) #nav-music {
+    display: none;
+  }
+
   body:has(#anMusic-page) #content-inner,
   body:has(#anMusic-page) #page {
     z-index: auto;
