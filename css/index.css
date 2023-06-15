@@ -9605,7 +9605,7 @@ body:has(#anMusic-page) #nav-music {
 
 #anMusic-page .aplayer-info .aplayer-lrc {
   height: 800%;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 #anMusic-page .aplayer-info .aplayer-lrc p {
   font-size: 18px;
@@ -9932,6 +9932,11 @@ body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time
   #anMusic-page .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap {
     left: -66px;
   }
+}
+
+
+.img-wrap{
+  text-align: center;
 }
 .search-dialog {
   position: fixed;
