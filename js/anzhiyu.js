@@ -1,8 +1,16 @@
 var anzhiyu = {
     // 音乐节目切换背景
     changeMusicBg: function (isChangeBg = true) {
-      console.log(window.location.pathname,'window.location.pathname');
-      if (window.location.pathname != "/music/") {
+      const aplayerIconMenu = document.querySelector(".aplayerFixed");
+      const fps = document.getElementById("fps");
+      if (window.location.pathname != "/life/music/") {
+        if (aplayerIconMenu?.style) {
+          aplayerIconMenu.style.display="block"
+        }
+        if (fps?.style) {
+          fps.style.display="block"
+        }
+        document.body.dataset.type = 'WEI'
         return;
       }
       const anMusicBg = document.getElementById("an_music_bg");
@@ -10,23 +18,32 @@ var anzhiyu = {
       if (isChangeBg) {
         // player listswitch 会进入此处
         const musiccover = document.querySelector("#anMusic-page .aplayer-pic");
-        anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;
+        if (anMusicBg?.style) {
+            anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;
+        }
       } else {
         // 第一次进入，绑定事件，改背景
         let timer = setInterval(() => {
+          document.body.dataset.type = 'music'
           const musiccover = document.querySelector("#anMusic-page .aplayer-pic");
-          // 确保player加载完成
-          console.info(anMusicBg);
+          if (aplayerIconMenu?.style) {
+            aplayerIconMenu.style.display="none"
+          }
+          if (fps?.style) {
+            fps.style.display="none"
+          }
           if (musiccover) {
             clearInterval(timer);
-            anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;
+            if (anMusicBg?.style) {
+                anMusicBg.style.backgroundImage = musiccover.style.backgroundImage;
+            }
             // 绑定事件
             anzhiyu.addEventListenerChangeMusicBg();
   
             // 暂停nav的音乐
             if (
-              document.querySelector("#nav-music meting-js").aplayer &&
-              !document.querySelector("#nav-music meting-js").aplayer.audio.paused
+              document.querySelector("#nav-music meting-js")?.aplayer &&
+              !document.querySelector("#nav-music meting-js")?.aplayer.audio.paused
             ) {
               anzhiyu.musicToggle();
             }
@@ -37,10 +54,8 @@ var anzhiyu = {
     addEventListenerChangeMusicBg: function () {
       const anMusicPage = document.getElementById("anMusic-page");
       const aplayerIconMenu = anMusicPage.querySelector(".aplayer-info .aplayer-time .aplayer-icon-menu");
-  
       anMusicPage.querySelector("meting-js").aplayer.on("loadeddata", function () {
         anzhiyu.changeMusicBg();
-        console.info("player loadeddata");
       });
   
       aplayerIconMenu.addEventListener("click", function () {
@@ -49,7 +64,7 @@ var anzhiyu = {
       });
   
       document.getElementById("menu-mask").addEventListener("click", function () {
-        if (window.location.pathname != "/music/") return;
+        if (window.location.pathname != "/life/music/") return;
         anMusicPage.querySelector(".aplayer-list").classList.remove("aplayer-list-hide");
       });
     },
