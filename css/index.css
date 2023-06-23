@@ -10045,6 +10045,11 @@ hr:before {
   font-size: 20px;
   border-bottom: none;
 }
+
+
+.bangumi-picture img[data-lazy-src]:not(.loaded){
+  filter:none
+}
 .search-dialog {
   position: fixed;
   top: 10%;
