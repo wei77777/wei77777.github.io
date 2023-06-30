@@ -6007,6 +6007,11 @@ mjx-container[display],
 [data-theme='dark'] .card_box::after {
   background: rgba(0,0,0,0.4);
 }
+@media screen and (max-width: 768px) {
+  .card_box {
+    width: 160px !important;
+  }
+}
 #article-container figure.gallery-group {
   position: relative;
   float: left;
@@ -11527,6 +11532,12 @@ hr:before {
   display: flex;
   flex-wrap: wrap;
   gap: 17px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-flex{
+    justify-content: center;
+  }
 }
 /* 灯笼 Start */
 
