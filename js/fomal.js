@@ -361,6 +361,29 @@ document.addEventListener("copy", function () {
   }, 300);
 })
 
+function addAnchor () {
+  if($("#no-anchor").length > 0){
+      $("#no-anchor").remove();
+  }
+  var txt = window.getSelection().toString();
+  txt = txt.replace(/<[^>]*>/g, "");
+  $("#post-anchor-box").prepend('<a class="anchor-item" href="javascript:void(0);" onclick="toAnchor(this)" data-pjax-state="">'+txt+'</a>');
+  debounce(function () {
+    new Vue({
+      data: function () {
+        this.$notify({
+          title: "哎嘿！成功添加一个文本锚点",
+          message: "您现在可以通过右下角按钮来进行锚点选择您想要查看的内容！",
+          position: 'top-left',
+          offset: 50,
+          showClose: true,
+          type: "success",
+          duration: 5000
+        });
+      }
+    })
+  }, 300);
+}
 
 // f12提醒但不禁用
 document.onkeydown = function (e) {

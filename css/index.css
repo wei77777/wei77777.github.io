@@ -11687,6 +11687,82 @@ hr:before {
   right: 4px;
   transition: 0.4s;
 }
+
+/* 文章添加锚点*/
+#post-anchor{
+  z-index: 10!important;
+}
+#post-anchor-rom{
+  position: fixed;
+  width: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  bottom: 20px;
+  right: -241px;
+  border: var(--anchor-border);
+  transition: all .27s;
+  opacity: 0;
+  max-height: 380px;
+  height: 100%;
+  width: 240px;
+  z-index: 9;
+}
+#post-anchor-box{
+  display:flex;
+  background: #fff;
+  max-height: 380px;
+  height: 100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 12px;
+  overflow: auto;
+}
+#post-anchor-box a{
+  padding: 5px 10px;
+  width: 100%;
+  border-bottom: 1px solid rgb(8, 148, 235);
+  font-weight: 800;
+}
+#post-anchor:hover #post-anchor-rom{
+  opacity: 1;
+  right: 70px;
+  transition: all .25s;
+}
+#article-container anchorbox{
+  color: black!important;
+  font-weight: 800!important;
+  border-radius: 6px!important;
+  background-color: rgb(253 253 20 / 70%)!important;
+}
+a.anchor-item{
+  font-size: 16px;
+  line-height: 17px;
+  text-align: left;
+}
+a.anchor-item:hover{
+  background-color: #16b2ef;
+  color: #fff;
+}
+#no-anchor{
+  color: rgb(140, 140, 140);
+  font-size: 30px;
+  line-height: 375px;
+  opacity: 0.8;
+}
+[data-theme=dark]
+#post-anchor-box{
+  background: #000;
+}
+[data-theme=dark]
+#article-container anchor{
+  color: rgb(255, 255, 255);
+}
+@media screen and (max-width:768px){
+  #rightside #post-anchor{
+      display: none!important;
+  }
+}
 /* 灯笼 Start */
 
 * {
