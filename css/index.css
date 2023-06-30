@@ -6007,9 +6007,33 @@ mjx-container[display],
 [data-theme='dark'] .card_box::after {
   background: rgba(0,0,0,0.4);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
+  .card-flex {
+    gap: 15px !important;
+  }
   .card_box {
-    width: 160px !important;
+    width: calc(20% - 12px) !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card-flex {
+    gap: 16px !important;
+  }
+  .card_box {
+    width: calc(25% - 12px) !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-flex {
+    gap: 15px !important;
+  }
+  .card_box {
+    width: calc(100% / 3 - 10px) !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card_box {
+    width: calc(49% - 8px) !important;
   }
 }
 #article-container figure.gallery-group {
@@ -10043,6 +10067,9 @@ a:hover {
 .hide-block > .hide-button {
   background: var(--theme-color) !important;
 }
+#article-container{
+  padding-bottom: 20px;
+}
 #article-container .tabs > .nav-tabs > .tab.active button {
   border-top: 2px solid var(--theme-color) !important;
 }
@@ -11534,10 +11561,131 @@ hr:before {
   gap: 17px;
 }
 
-@media only screen and (max-width: 768px) {
-  .card-flex{
-    justify-content: center;
-  }
+/* 左侧悬浮提示*/
+.contact-info{
+  position: fixed;
+  top: 36%;
+  z-index: 200;
+  left: -50px;
+  transition: 0.4s;
+}
+.contact-info:hover{
+  left: 0px;
+}
+.contact-info .option{
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-info .option i{
+  display: block;
+  width: 50px;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  background: rgb(255, 255, 255);
+  color: #b9b9b9;
+  font-size: 20px;
+  transition: 0.4s;
+  border-radius: 0 10px 10px 0;
+}
+
+.contact-info .option:hover i{
+  color:var(--btn-bg);
+}
+.contact-info .text{
+  border-radius: 15px;
+  position: absolute;
+  height: 60px;
+  width: 200px;
+  background: rgba(255,255,255,.85);
+  top: 0;
+  z-index: -1;
+  left: -136px;
+  color: rgb(0, 0, 0);
+  line-height: 60px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.contact-info :first-child:hover .something{
+  display: block;
+}
+
+.something {
+  display: none;
+  position: fixed;
+  width: 600px;
+  height: 450px;
+  left: 32%;
+  top: 20%;
+  border: solid 2px #ece9e9;
+  border-radius: 8px;
+  z-index: 1010;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: fadenum1 .6s 1;
+}
+
+
+.contact-info .text .post-reward{
+  margin-top: 0 !important;
+}
+.contact-info .text .post-reward .reward-button{
+  background:var(--btn-bg);
+  padding: 0.2rem 2.2rem !important;
+  border-radius: 8px !important;
+}
+.contact-info .text .post-reward .reward-button .tip-button__text{
+  margin-right: 0 !important;
+}
+
+.contact-info .option:hover .text{
+  left: 60px;
+}
+.contact-info .blok{
+  position: absolute;
+  height: 60px;
+  width: 100px;
+  top: 0;
+  z-index: -1;
+  left: 0px;
+}
+
+.contact-info .bloktop{
+  position: absolute;
+  height: 75px;
+  width: 100px;
+  bottom: 0px;
+  z-index: -1;
+  left: 0px;
+}
+[data-theme=dark]
+.contact-info .option i{
+  background: rgb(22, 22, 22);
+  color: #b9b9b9;
+}
+[data-theme=dark]
+.contact-info .text{
+  background: rgba(23, 23, 23, 0.85);
+  color: rgba(255, 255, 255, 0.92);
+}
+@media screen and (max-width:1300px){
+  .contact-info{
+      display: none!important;
+    }
+}
+.contact-info .text .strip{
+  border-radius: 5px;
+  position: absolute;
+  height: 36px;
+  width: 5px;
+  background: var(--btn-bg);
+  top: 12px;
+  z-index: -1;
+  right: 4px;
+  transition: 0.4s;
 }
 /* 灯笼 Start */
 
