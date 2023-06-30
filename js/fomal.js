@@ -2519,15 +2519,15 @@ if (m == 12 && dd == 25) {//圣诞节
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-if (m == 8 && dd == 11) {//站长生日
+if (m == 3 && dd == 8) {//站长生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
     Swal.fire("祝站长" + (y - 2001).toString() + "岁生日快乐！🥝");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-if (m == 6 && dd == 30) {//小猫咪生日
+if (m == 6 && dd ==30) {//小猫咪生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝小猫咪" + (y - 1999).toString() + "岁生日快乐！🐱");
+    Swal.fire("祝小猫咪" + (y - 2022).toString() + "岁生日快乐！🐱");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
