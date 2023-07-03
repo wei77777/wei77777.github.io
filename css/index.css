@@ -12410,6 +12410,47 @@ details>summary::-webkit-details-marker {
 /* 响应式 */
 
 /* 我的好物样式 */
+
+
+
+/* 古诗词卡片 */
+#card-poem{
+  display: flex;
+  flex-direction: column;
+  min-height: 130px;
+}
+
+div#poem_sentence{
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #edf0f7;
+  font-weight: bold;
+}
+
+div#poem_info{
+  display: flex;
+  color: rgba(60, 60, 67, 0.6);
+  font-size: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  line-height: 50px;
+}
+
+div#poem_author{
+  order: 1;
+  padding: 2px;
+  margin-left: 8px;
+}
+
+div#poem_dynasty{
+  order: 0;
+  padding: 2px 4px 2px 6px;
+  color: #363636;
+  border-radius: 8px;
+}
 /* 灯笼 Start */
 
 * {
