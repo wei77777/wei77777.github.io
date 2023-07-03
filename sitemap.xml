@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wei77777.github.io/social/link/index.html</loc>
+    
+    <lastmod>2023-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/personal/equipment/index.html</loc>
     
     <lastmod>2023-07-03</lastmod>
@@ -23,15 +32,6 @@
     <loc>https://wei77777.github.io/life/collect/index.html</loc>
     
     <lastmod>2023-07-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/social/link/index.html</loc>
-    
-    <lastmod>2023-06-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -313,14 +313,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Echarts/</loc>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
     <lastmod>2023-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <loc>https://wei77777.github.io/tags/Echarts/</loc>
     <lastmod>2023-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -350,14 +350,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Echarts/</loc>
+    <loc>https://wei77777.github.io/categories/CSS/</loc>
     <lastmod>2023-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/CSS/</loc>
+    <loc>https://wei77777.github.io/categories/Echarts/</loc>
     <lastmod>2023-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

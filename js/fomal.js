@@ -3548,14 +3548,21 @@ function toggleWinbox() {
   };
 }
 
-function randomPost() {
-  fetch("/baidusitemap.xml").then((e=>e.text())).then((e=>(new window.DOMParser).parseFromString(e, "text/xml"))).then((e=>{
-      let t = e.querySelectorAll("url loc");
-      for (; ; ) {
-          let e = t[Math.floor(Math.random() * t.length)].innerHTML;
-          if (location.href != e)
-              return void (location.href = e)
+function flinkRandom(flinkList){
+  if (flinkList?.length) {
+    let arr=[]
+    flinkList.map(item=>{
+      if (item.link_list) {
+        item.link_list.map(val=>{
+          arr.push(val.link)
+        })
       }
+    })
+    let url = arr[Math.floor(Math.random() * arr.length)];
+    while (true) {
+      if (location.href == url) continue;
+      location.href = url;
+      return;
+    }
   }
-  ))
 }
