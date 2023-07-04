@@ -12466,6 +12466,245 @@ div#poem_dynasty{
   color: #363636;
   border-radius: 8px;
 }
+
+/* 短文*/
+#icat-bber .icat-bber-container-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+#icat-bber .icat-bber-container-img .icat-bber-content-noimg {
+  width: calc(100% / 4 - 5px);
+}
+#icat-bber .icat-bber-content-img img {
+  object-fit: cover;
+  max-height: 100%;
+  border-radius: 6px;
+}
+#icat-bber .icat-bber-content-img {
+  height: 100px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+#icat-bber .icat-bber-content .datacont {
+  order: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--icat-fontcolor);
+  width: 100%;
+  line-height: 1.38;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 0px 8px;
+}
+#icat-bber p {
+  margin: 0px;
+}
+#icat-bber div.icat-bber-content {
+  display: flex;
+  flex-flow: wrap;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+}
+#icat-bber .icat-timeline ul li.icat-bber-item {
+  position: relative;
+  width: 32.13%;
+  border: var(--style-border-always);
+  border-radius: 12px;
+  padding: 1rem 1rem 0.9rem;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--icat-card-bg);
+  box-shadow: var(--icat-shadow-border);
+  margin-right: 2%;
+}
+#icat-bber .icat-timeline #waterfall.show {
+  opacity: 1;
+}
+#icat-bber .icat-timeline #waterfall {
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+#icat-bber ul.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#icat-bber {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+#icat-bber > section > ul > li.icat-bber-item {
+  margin-bottom: 1rem;
+}
+#icat-bber-tips {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+#icat-bber .icat-timeline ul li.icat-bber-item hr {
+  display: flex;
+  position: relative;
+  margin: 8px 0px;
+  border: 1px dashed var(--icat-blue);
+  width: 100%;
+  opacity: 0.4;
+}
+#icat-bber .icat-bber-info {
+  display: flex;
+}
+#icat-bber > section > ul > li > div .icat-bber-info-time,
+#icat-bber > section > ul > li > div .icat-bber-info-from {
+  color: var(--icat-fontcolor);
+  font-size: 0.7rem;
+  background-color: #9999992b;
+  padding: 0px 8px;
+  border-radius: 20px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+}
+#icat-bber > section > ul > li > div .icat-bber-info-time > i {
+  padding-right: 4px;
+}
+#icat-bber > section > ul > li > div .icat-bber-info-from span,
+#icat-bber > section > ul > li > div .icat-bber-info-from {
+  margin-left: 0.5rem;
+}
+.icat-bber-info-from > .fa-popsicle + span {
+  margin-right: 0.2rem;
+}
+#icat-bber .icat-bber-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+#icat-bber .icat-timeline ul li.icat-bber-item:hover {
+  border:1px solid var(--color-pink);
+}
+#icat-bber .icat-bber-content-link {
+  display: flex;
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+  align-items: center;
+  background-color: rgba(245, 108, 108, 0.13);
+  color: rgb(245, 108, 108);
+  padding: 0px 8px;
+  border-radius: 20px;
+  padding-right: 10px;
+}
+#icat-bber .icat-bber-content-link i {
+  margin-right: 4px;
+}
+#icat-bber .icat-bber-content-link:hover {
+  background-color: var(--icat-main);
+  color: var(--icat-white);
+}
+#icat-bber .icat-bber-music {
+  width: 100%;
+  height: 90px;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: var(--style-border-always);
+  background: var(--icat-secondbg);
+}
+#icat-bber .aplayer {
+  margin: 0;
+}
+#icat-bber .aplayer.aplayer-withlrc .aplayer-pic {
+  height: 82px;
+  width: 82px;
+  margin: 4px;
+  border-radius: 4px;
+}
+.icat-bber-music .aplayer.aplayer-withlrc .aplayer-info {
+  padding: 5px 7px 0;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-music {
+  height: 23px;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-music .aplayer-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--icat-fontcolor);
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller {
+  align-items: center;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+  padding: 0;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  position: initial;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+  background: var(--icat-gray);
+  height: 8px;
+  border-radius: 12px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+  height: 100%;
+  border-radius: 12px;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+  height: 100%;
+  border-radius: 12px;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+  display: none;
+}
+#icat-bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  position: initial;
+}
+
+@media screen and (max-width: 1300px) {
+  #icat-bber .icat-timeline ul li.icat-bber-item {
+    width: 49%;
+    margin-right: 1%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #icat-bber .icat-timeline ul li.icat-bber-item {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+/* 响应式 */
+
+[data-theme="dark"] #icat-bber .icat-timeline ul li.icat-bber-item hr {
+  opacity: 0.2;
+}
+[data-theme="dark"] #icat-bber .icat-bber-music .aplayer,
+[data-theme="dark"] #icat-bber .aplayer .aplayer-lrc:before,
+[data-theme="dark"] #icat-bber .aplayer .aplayer-lrc:after {
+  background: var(--icat-card-bg);
+  color: var(--icat-fontcolor);
+}
+#icat-bber .aplayer .aplayer-lrc p {
+  color: var(--icat-fontcolor);
+}
+
+/* 即刻短文样式 */
 /* 灯笼 Start */
 
 * {
