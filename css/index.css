@@ -12136,6 +12136,7 @@ a.anchor-item:hover{
 }
 .icat-records-self,
 .icat-records-the-other-side {
+  position: relative;
   padding: 12px 2rem;
   display: flex;
   clear: both;
@@ -12172,6 +12173,15 @@ a.anchor-item:hover{
   color: var(--icat-the-other-side-content-text-color);
 }
 /* 文字内容 */
+.icat-avatar_name-left{
+  position: absolute;
+  top:8px;
+  left: 6.2em;
+}
+
+.icat-records-top{
+  margin-top: 20px;
+}
 
 .icat-records-left-arrowhead {
   position: absolute;
@@ -12258,6 +12268,11 @@ details>summary::-webkit-details-marker {
 /* 折叠栏 */
 
 @media screen and (max-width: 768px) {
+  .icat-avatar_name-left{
+    font-size: 12px;
+    position: absolute;
+    left: 5.2em;
+  }
   .icat-records-self, .icat-records-the-other-side {
       padding: 12px 4px;
   }
