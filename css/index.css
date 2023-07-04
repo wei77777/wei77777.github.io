@@ -12426,47 +12426,6 @@ details>summary::-webkit-details-marker {
 
 /* 我的好物样式 */
 
-
-
-/* 古诗词卡片 */
-#card-poem{
-  display: flex;
-  flex-direction: column;
-  min-height: 130px;
-}
-
-div#poem_sentence{
-  text-align: center;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
-  border-radius: 12px;
-  background: #edf0f7;
-  font-weight: bold;
-}
-
-div#poem_info{
-  display: flex;
-  color: rgba(60, 60, 67, 0.6);
-  font-size: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  line-height: 50px;
-}
-
-div#poem_author{
-  order: 1;
-  padding: 2px;
-  margin-left: 8px;
-}
-
-div#poem_dynasty{
-  order: 0;
-  padding: 2px 4px 2px 6px;
-  color: #363636;
-  border-radius: 8px;
-}
-
 /* 短文*/
 #icat-bber .icat-bber-container-img {
   display: flex;
@@ -12705,6 +12664,24 @@ div#poem_dynasty{
 }
 
 /* 即刻短文样式 */
+.author-content-box{
+  width:100%;
+  background-size: cover;
+  min-height: 300px;
+  color: var(--color-whitegray);
+  overflow: hidden;
+}
+
+@media screen and (max-width:768px){
+  .author-content-box{
+    min-height: 200px;
+  }
+}
+
+
+body[data-type="essay"] #page-header{
+  height: 3rem !important;
+}
 /* 灯笼 Start */
 
 * {

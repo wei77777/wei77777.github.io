@@ -10,7 +10,6 @@ var anzhiyu = {
         if (fps?.style) {
           fps.style.display="block"
         }
-        document.body.dataset.type = 'WEI'
         return;
       }
       const anMusicBg = document.getElementById("an_music_bg");
@@ -24,7 +23,6 @@ var anzhiyu = {
       } else {
         // 第一次进入，绑定事件，改背景
         let timer = setInterval(() => {
-          document.body.dataset.type = 'music'
           const musiccover = document.querySelector("#anMusic-page .aplayer-pic");
           if (aplayerIconMenu?.style) {
             aplayerIconMenu.style.display="none"

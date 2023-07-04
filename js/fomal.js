@@ -3631,3 +3631,22 @@ function waterfall(a) {
 // 瀑布流
 
 // 即刻短文JS
+
+function setDataType(){
+  let pathname=window.location.pathname
+  if (pathname=='/') {
+    document.body.dataset.type='WEI'
+  }else{
+    let name=pathname.substring(1,pathname.length-1)
+    if (name.indexOf('/')!=-1) {
+      let typeName=name.substring(name.indexOf("/")+1)
+      document.body.dataset.type=typeName
+    }else{
+      document.body.dataset.type=name
+    }
+  }
+}
+
+window.onload = setDataType;
+// 如果使用了pjax在加上下面这行代码
+document.addEventListener('pjax:complete', setDataType);
