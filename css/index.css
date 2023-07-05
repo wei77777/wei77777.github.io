@@ -1534,7 +1534,7 @@ img[data-lazy-src].error {
   text-decoration: none !important;
 }
 blockquote {
-  margin: 0 0 20px;
+  margin: 20px 0 20px;
   padding: 12px 15px;
   border-left: 3px solid #49b1f5;
   background-color: var(--blockquote-bg);
@@ -7697,7 +7697,7 @@ blockquote.pullquote.right {
   }
   
   .author-content-item .card-content .banner-button-group .banner-button:hover {
-    background: var(--anzhiyu-main);
+    background: var(--btn-bg);
     color: var(--color-whitegray);
     border-radius: 20px !important;
   }
@@ -7833,7 +7833,7 @@ blockquote.pullquote.right {
   }
   
   .post-tips a:hover {
-    color: var(--anzhiyu-main) !important;
+    color: var(--btn-bg) !important;
     background: none !important;
   }
   
@@ -8203,7 +8203,7 @@ blockquote.pullquote.right {
     }
     .layout > div:first-child:not(.recent-posts) {
       /* border-radius: 0; */
-      padding: 0 1rem !important;
+      padding:0 1rem 1rem 1rem !important;
       box-shadow: none !important;
       background: var(--global-bg);
     }
@@ -10248,7 +10248,7 @@ a:hover {
   background: var(--theme-color) !important;
 }
 #article-container{
-  padding-bottom: 20px;
+  padding-top: 20px;
 }
 #article-container .tabs > .nav-tabs > .tab.active button {
   border-top: 2px solid var(--theme-color) !important;
@@ -12681,6 +12681,21 @@ details>summary::-webkit-details-marker {
 
 body[data-type="essay"] #page-header{
   height: 3rem !important;
+}
+body[data-type="records"] #page-header{
+  height: 3rem !important;
+}
+body[data-type="equipment"] #page-header{
+  height: 3rem !important;
+}
+body[data-type="about"] #page-header{
+  height: 3rem !important;
+}
+body[data-type="airconditioning"] #page-header{
+  height: 3rem !important;
+}
+body[data-type="bangumis"] #page-header{
+  background-image:url('https://img.gejiba.com/images/b6bdf2bbc9fe5e85953d71e39ba6b566.jpg')
 }
 /* 灯笼 Start */
 
