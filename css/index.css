@@ -12694,6 +12694,9 @@ body[data-type="about"] #page-header{
 body[data-type="airconditioning"] #page-header{
   height: 3rem !important;
 }
+body[data-type="time"] .fj-gallery{
+  margin-left: 25px !important;
+}
 body[data-type="bangumis"] #page-header{
   background-image:url('https://img.gejiba.com/images/eb2af9a3f0997310091a47070216a1f5.jpg')
 }
@@ -12701,6 +12704,7 @@ body[data-type="bangumis"] #page-header{
 body[data-type="comments"] #page-header{
   background-image:url('https://img.gejiba.com/images/06e11b2d91353ff3e81ecb49cb141145.jpg')
 }
+
 /* 灯笼 Start */
 
 * {
