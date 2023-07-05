@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wei77777.github.io/box/nav/index.html</loc>
+    <loc>https://wei77777.github.io/personal/love/index.html</loc>
     
     <lastmod>2023-07-05</lastmod>
     
@@ -11,7 +11,25 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/box/games/index.html</loc>
+    <loc>https://wei77777.github.io/personal/equipment/index.html</loc>
+    
+    <lastmod>2023-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/social/link/index.html</loc>
+    
+    <lastmod>2023-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/box/nav/index.html</loc>
     
     <lastmod>2023-07-05</lastmod>
     
@@ -29,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/bangumis/index.html</loc>
+    <loc>https://wei77777.github.io/box/games/index.html</loc>
     
     <lastmod>2023-07-05</lastmod>
     
@@ -47,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/life/movies/index.html</loc>
+    <loc>https://wei77777.github.io/life/collect/index.html</loc>
     
     <lastmod>2023-07-05</lastmod>
     
@@ -56,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/life/collect/index.html</loc>
+    <loc>https://wei77777.github.io/life/movies/index.html</loc>
     
     <lastmod>2023-07-05</lastmod>
     
@@ -83,7 +101,16 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/social/link/index.html</loc>
+    <loc>https://wei77777.github.io/personal/records/index.html</loc>
+    
+    <lastmod>2023-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/bangumis/index.html</loc>
     
     <lastmod>2023-07-05</lastmod>
     
@@ -128,25 +155,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/personal/equipment/index.html</loc>
-    
-    <lastmod>2023-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/personal/essay/index.html</loc>
-    
-    <lastmod>2023-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/records/index.html</loc>
     
     <lastmod>2023-07-05</lastmod>
     
@@ -236,15 +245,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/personal/love/index.html</loc>
-    
-    <lastmod>2023-06-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/life/music/index.html</loc>
     
     <lastmod>2023-06-20</lastmod>
@@ -308,6 +308,13 @@
 
   
   <url>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <lastmod>2023-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/tags/Markdown/</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -316,13 +323,6 @@
   
   <url>
     <loc>https://wei77777.github.io/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2023-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -352,14 +352,14 @@
 
   
   <url>
-    <loc>https://wei77777.github.io/categories/Markdown/</loc>
+    <loc>https://wei77777.github.io/categories/CSS/</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/CSS/</loc>
+    <loc>https://wei77777.github.io/categories/Markdown/</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
