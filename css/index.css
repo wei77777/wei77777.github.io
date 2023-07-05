@@ -12697,6 +12697,10 @@ body[data-type="airconditioning"] #page-header{
 body[data-type="bangumis"] #page-header{
   background-image:url('https://img.gejiba.com/images/b6bdf2bbc9fe5e85953d71e39ba6b566.jpg')
 }
+
+body[data-type="comments"] #page-header{
+  background-image:url('https://img.gejiba.com/images/19588b85266b26c8fd381bbf2e2c3365.jpg')
+}
 /* 灯笼 Start */
 
 * {
