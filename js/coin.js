@@ -11,8 +11,7 @@ tipButtons.forEach((button) => {
     var coin = button.querySelector('.coin')
 
     // The larger the number, the slower the animation
-    if (coin?.maxMoveLoopCount) coin.maxMoveLoopCount = 90
-
+    if (coin)  coin.maxMoveLoopCount = 90
     button.addEventListener('click', () => {
         if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true; //媒体选择
         if (button.clicked) return

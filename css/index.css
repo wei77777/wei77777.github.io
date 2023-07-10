@@ -8826,6 +8826,10 @@ center#name-container {
 #nav .menus_items .menus_item {
   padding: 0 0 0 8px !important;
 }
+
+#nav .menus_items .menus_item .menus_item_child li:hover .menu_word {
+  color: #FFF;
+}
 /* 子菜单横向展示 */
 #nav .menus_items .menus_item:hover .menus_item_child {
   display: flex !important;
@@ -11795,17 +11799,17 @@ hr:before {
 .something {
   display: none;
   position: fixed;
-  width: 600px;
-  height: 450px;
-  left: 32%;
-  top: 20%;
-  border: solid 2px #ece9e9;
+  width: 300px;
+  height: 300px;
+  left: 40%;
+  top: 30%;
   border-radius: 8px;
   z-index: 1010;
   background-repeat:no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   animation: fadenum1 .6s 1;
+
 }
 
 
@@ -12555,15 +12559,15 @@ details>summary::-webkit-details-marker {
   margin-top: 10px;
 }
 #icat-bber .icat-timeline ul li.icat-bber-item:hover {
-  border:1px solid var(--color-pink);
+  border:1px solid var(--btn-bg);
 }
 #icat-bber .icat-bber-content-link {
   display: flex;
   margin-left: 0.5rem;
   font-size: 0.7rem;
   align-items: center;
-  background-color: rgba(245, 108, 108, 0.13);
-  color: rgb(245, 108, 108);
+  background-color: var(--btn-bg);
+  color:#FFF;
   padding: 0px 8px;
   border-radius: 20px;
   padding-right: 10px;
@@ -12572,8 +12576,7 @@ details>summary::-webkit-details-marker {
   margin-right: 4px;
 }
 #icat-bber .icat-bber-content-link:hover {
-  background-color: var(--icat-main);
-  color: var(--icat-white);
+  background: var(--text-bg-hover);
 }
 #icat-bber .icat-bber-music {
   width: 100%;
@@ -12678,6 +12681,92 @@ details>summary::-webkit-details-marker {
   }
 }
 
+/* 清单样式*/
+#todolist-box{
+  margin: 0 10px;
+}
+#todolist-main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 16px 0 10px;
+}
+#todolist-main li{
+  list-style:none;
+  font-size: 17px;
+}
+#todolist-main ul{
+  margin: 0;
+  padding: 0;
+}
+#todolist-left{
+  width: 50%;
+  padding: 0 8px 0 0;
+}
+#todolist-right{
+  width: 50%;
+  padding: 0 0 0 8px;
+}
+.todolist-item{
+  position: relative;
+  border-radius: 12px;
+  padding: 10px 1rem 1.2rem;
+  border: 2px dashed var(--theme-color);
+  margin-bottom: 1rem;
+}
+[data-theme=dark]
+.todolist-item{
+  background: #242424;
+  border: 2px dashed var(--theme-color);
+}
+li.todolist-li i{
+  margin-left: 10px;
+}
+li.todolist-li .fa-circle-check{
+  color:var(--theme-color);
+}
+h3.todolist-title{
+  margin: 0!important;
+}
+li.todolist-li{
+  font-weight: normal;
+}
+.todolist-li span{
+  margin-left: 5px;
+}
+@media screen and (max-width:700px){
+  #todolist-left,#todolist-right{
+      width: 100%;
+      padding: 0;
+  }
+}
+.page-top-card{
+background-size: cover;
+background-position: center;
+height: 20.5rem;
+padding: 10px 2.7rem;
+border-radius: 20px;
+color: white;
+position: relative;
+}
+.page-top-card span.content-item-title{
+font-size: 2.3em;
+font-weight: bold;
+line-height: 1.2;
+font-family: STZhongsong,'Microsoft YaHei';
+}
+.page-top-card .content-bottom{
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: absolute;
+width: calc(100% - 5.4rem);
+bottom: 1rem;
+}
+[data-theme='dark'] .page-top-card{
+opacity: .92;
+}
 
 body[data-type="essay"] #page-header{
   height: 3rem !important;
@@ -12694,6 +12783,10 @@ body[data-type="about"] #page-header{
 body[data-type="airconditioning"] #page-header{
   height: 3rem !important;
 }
+body[data-type="toDoList"] #page-header{
+  height: 3rem !important;
+}
+
 body[data-type="time"] .fj-gallery{
   margin-left: 25px !important;
 }

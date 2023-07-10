@@ -122,7 +122,7 @@ var icatessay = {
     const suffix = GLOBAL_CONFIG.date_suffix || {};
     const daySuffix = suffix.day || '天前';
     const hourSuffix = suffix.hour || '小时前';
-    const minSuffix = suffix.hour || '分钟前';
+    const minSuffix = suffix.min || '分钟前'; 
 
     if (more) {
       const monthCount = dateDiff / month;
