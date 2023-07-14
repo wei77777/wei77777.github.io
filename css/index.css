@@ -12531,7 +12531,8 @@ details>summary::-webkit-details-marker {
   display: flex;
 }
 #icat-bber > section > ul > li > div .icat-bber-info-time,
-#icat-bber > section > ul > li > div .icat-bber-info-from {
+#icat-bber > section > ul > li > div .icat-bber-info-from,
+#icat-bber > section > ul > li > div .icat-bber-info-position{
   color: var(--icat-fontcolor);
   font-size: 0.7rem;
   background-color: #9999992b;
@@ -12549,6 +12550,12 @@ details>summary::-webkit-details-marker {
 #icat-bber > section > ul > li > div .icat-bber-info-from {
   margin-left: 0.5rem;
 }
+
+#icat-bber > section > ul > li > div .icat-bber-info-position span,
+#icat-bber > section > ul > li > div .icat-bber-info-position {
+  margin-left: 0.5rem;
+}
+
 .icat-bber-info-from > .fa-popsicle + span {
   margin-right: 0.2rem;
 }
