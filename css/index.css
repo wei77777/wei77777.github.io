@@ -7414,18 +7414,18 @@ blockquote.pullquote.right {
     overflow: hidden;
   }
   
-  #page:has(#about-page) {
+  body[data-type="about"] #page{
     border: 0;
     box-shadow: none !important;
     padding: 0 !important;
     background: transparent !important;
   }
   
-  #page:has(#about-page) .page-title {
+  body[data-type="about"] .page-title {
     display: none;
   }
   
-  .page:has(#about-page) #footer-wrap {
+  body[data-type="about"] #footer-wrap {
     opacity: 1;
     overflow: visible;
     height: auto !important;
@@ -7433,15 +7433,15 @@ blockquote.pullquote.right {
     color: #666 !important;
   }
 
-  .page:has(#about-page) #footer-wrap #ft{
+  body[data-type="about"] #footer-wrap #ft{
     color: #666 !important;
   }
 
-  .page:has(#about-page) #footer-wrap #ft .ft-links li a{
+  body[data-type="about"] #footer-wrap #ft .ft-links li a{
     color: #666 !important;
   }
   
-  .page:has(#about-page) #footer-wrap #ft .ft-links li a:hover{
+  body[data-type="about"] #footer-wrap #ft .ft-links li a:hover{
     color: var(--loading-color) !important;
   }
 
