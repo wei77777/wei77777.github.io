@@ -4592,11 +4592,6 @@ h1.page-title + .tag-cloud-list {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 768px) {
-  #page-header {
-    height: 14rem !important;
-  }
-}
 #page-header.not-top-img {
   margin-bottom: 10px;
   height: 60px;
@@ -12773,25 +12768,6 @@ bottom: 1rem;
 }
 [data-theme='dark'] .page-top-card{
 opacity: .92;
-}
-
-body[data-type="essay"] #page-header{
-  height: 3rem !important;
-}
-body[data-type="records"] #page-header{
-  height: 3rem !important;
-}
-body[data-type="equipment"] #page-header{
-  height: 3rem !important;
-}
-body[data-type="about"] #page-header{
-  height: 3rem !important;
-}
-body[data-type="airconditioning"] #page-header{
-  height: 3rem !important;
-}
-body[data-type="toDoList"] #page-header{
-  height: 3rem !important;
 }
 
 body[data-type="time"] .fj-gallery{
