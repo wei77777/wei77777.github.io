@@ -3637,13 +3637,9 @@ function setDataType(){
   if (pathname=='/') {
     document.body.dataset.type='WEI'
   }else{
-    let name=pathname.substring(1,pathname.length-1)
-    if (name.indexOf('/')!=-1) {
-      let typeName=name.substring(name.indexOf("/")+1)
-      document.body.dataset.type=typeName
-    }else{
-      document.body.dataset.type=name
-    }
+    let typeList=pathname.substring(1,pathname.length-1).split('/')
+    let typeName=typeList[typeList.length-1]
+    document.body.dataset.type=typeName
   }
 }
 
