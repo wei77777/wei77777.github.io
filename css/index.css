@@ -12781,11 +12781,6 @@ body[data-type="comments"] #page-header{
   background-image:url('https://img.gejiba.com/images/06e11b2d91353ff3e81ecb49cb141145.jpg')
 }
 
-.ititle {
-    margin: 15px 0;
-    text-align:center;
-    font-family: 'Architects Daughter', cursive;
-}
 .ipage {
     line-height: 30px;
     margin: 0 auto;
@@ -12818,15 +12813,14 @@ body[data-type="comments"] #page-header{
     margin: 0
 }
 .ititle {
-    font-family: 'Architects Daughter', cursive;
+    margin: 15px 0;
+    text-align:center;
     font-size: 1.45rem!important;
-    padding: 10px auto;
 }
 .izhengwen p {
     position: relative;
     line-height: 2.2rem!important;
     text-indent: 2em;
-    font-family: 'Architects Daughter', cursive!important;
     font-size: 1.45rem!important;
 }
 .ipage::before {
