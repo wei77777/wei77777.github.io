@@ -2453,7 +2453,7 @@ figure.highlight pre .javascript .function {
   -ms-flex: 1 auto;
   flex: 1 auto;
   margin: 0 auto;
-  padding: 40px 15px;
+  padding: 20px 15px 40px 15px;
   max-width: 1200px;
   width: 100%;
 }
@@ -2489,7 +2489,7 @@ figure.highlight pre .javascript .function {
   }
 }
 .layout > div:first-child {
-  width: 74%;
+  width: 78.5%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -12826,6 +12826,9 @@ li.todolist-li i{
 li.todolist-li .fa-circle-check{
   color:var(--theme-color);
 }
+li.todolist-li .fa-circle-check+span{
+  text-decoration: line-through;
+}
 h3.todolist-title{
   margin: 0!important;
 }
@@ -12877,6 +12880,111 @@ body[data-type="bangumis"] #page-header{
 
 body[data-type="comments"] #page-header{
   background-image:url('https://img.gejiba.com/images/06e11b2d91353ff3e81ecb49cb141145.jpg')
+}
+
+#bbTimeList {
+  font-size: 18px;
+  background: #fff;;
+  color: #363636;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px -5px rgba(102,68,68,0);;
+  display: flex;
+  transition: all 0.3s ease 0s;
+  margin: 1rem auto 0;
+  border: 1px solid  #e3e8f7;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  max-width: 1370px;
+}
+@media screen and (max-width: 1400px) {
+  #bbTimeList {
+    max-width: calc(100% - 30px);
+    animation: slide-in 0.6s 0s backwards;
+  }
+}
+@media screen and (max-width: 768px) {
+  div#bbTimeList {
+    margin: 0 20px 15px;
+  }
+}
+[data-theme="dark"] #bbTimeList {
+  background: #000 !important;
+}
+#bbtalk {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#bber-talk {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+}
+i.bber-logo {
+  font-size: 2rem;
+  line-height: 22px;
+  margin-right: 1rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer !important;
+}
+i.bber-logo:hover,
+i.bber-gotobb:hover {
+  color:#3b70fc;
+}
+
+i.bber-gotobb {
+  line-height: 30px;
+  margin-left: 1rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+#bber-talk .li-style {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.3s;
+  font-weight: 700;
+  margin: auto;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#bber-talk .li-style:hover {
+  color:#3b70fc;
+}
+
+#bbTimeList:hover {
+  border: 1px solid #3b70fc;
+  box-shadow:  0 8px 12px -3px rgba(66,89,239,0.137);
+}
+
+/* 文章页H1-H6图标样式效果 */
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
 }
 
 .ipage {

@@ -3646,3 +3646,36 @@ function setDataType(){
 window.onload = setDataType;
 // 如果使用了pjax在加上下面这行代码
 document.addEventListener('pjax:complete', setDataType);
+
+
+
+// 初始化即刻
+function initIndexEssay () {
+  if (!document.getElementById("bbTimeList")) return;
+  setTimeout(() => {
+    let essay_bar_swiper = new Swiper(".essay_bar_swiper_container", {
+      passiveListeners: true,
+      direction: "vertical",
+      loop: true,
+      autoplay: {
+        disableOnInteraction: true,
+        delay: 3000,
+      },
+      mousewheel: false,
+    });
+
+    let essay_bar_comtainer = document.getElementById("bbtalk");
+    if (essay_bar_comtainer !== null) {
+      essay_bar_comtainer.onmouseenter = function () {
+        essay_bar_swiper.autoplay.stop();
+      };
+      essay_bar_comtainer.onmouseleave = function () {
+        essay_bar_swiper.autoplay.start();
+      };
+    }
+  }, 100);
+}
+
+window.onload = initIndexEssay;
+// 如果使用了pjax在加上下面这行代码
+document.addEventListener('pjax:complete', initIndexEssay);
