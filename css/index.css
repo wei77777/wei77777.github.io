@@ -12987,6 +12987,9 @@ body.dark .ipage {
         padding: 0 0.2em 0 1.5em;
         font-size: 1em;
     }
+    body[data-type="article4"] .izhengwen p{
+        text-indent:0 !important;
+    }
 }
 /* 灯笼 Start */
 
