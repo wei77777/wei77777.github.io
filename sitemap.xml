@@ -2,9 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wei77777.github.io/personal/records/article4/index.html</loc>
+    <loc>https://wei77777.github.io/personal/love/index.html</loc>
     
-    <lastmod>2023-07-20</lastmod>
+    <lastmod>2023-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/personal/storys/article/1.html</loc>
+    
+    <lastmod>2023-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/personal/storys/article/2.html</loc>
+    
+    <lastmod>2023-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/personal/storys/article/3.html</loc>
+    
+    <lastmod>2023-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/personal/storys/article/4.html</loc>
+    
+    <lastmod>2023-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/personal/storys/index.html</loc>
+    
+    <lastmod>2023-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/personal/records/index.html</loc>
+    
+    <lastmod>2023-07-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -14,42 +68,6 @@
     <loc>https://wei77777.github.io/personal/album/index.html</loc>
     
     <lastmod>2023-07-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/records/article1/index.html</loc>
-    
-    <lastmod>2023-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/records/index.html</loc>
-    
-    <lastmod>2023-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/records/article3/index.html</loc>
-    
-    <lastmod>2023-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/records/article2/index.html</loc>
-    
-    <lastmod>2023-07-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -75,15 +93,6 @@
   
   <url>
     <loc>https://wei77777.github.io/personal/time/index.html</loc>
-    
-    <lastmod>2023-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/love/index.html</loc>
     
     <lastmod>2023-07-10</lastmod>
     
@@ -367,13 +376,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
-    <lastmod>2023-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/tags/Echarts/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -382,6 +384,13 @@
   
   <url>
     <loc>https://wei77777.github.io/tags/Git/</loc>
+    <lastmod>2023-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -404,13 +413,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/CSS/</loc>
-    <lastmod>2023-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/categories/Echarts/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -419,6 +421,13 @@
   
   <url>
     <loc>https://wei77777.github.io/categories/Git/</loc>
+    <lastmod>2023-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/CSS/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
