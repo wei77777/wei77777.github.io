@@ -2489,7 +2489,7 @@ figure.highlight pre .javascript .function {
   }
 }
 .layout > div:first-child {
-  width: 78.5%;
+  width: 74%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -8945,7 +8945,7 @@ center#name-container {
 #recent-posts > .recent-post-item {
   background: var(--trans-light);
   backdrop-filter: var(--backdrop-filter);
-  border-radius: 25px;
+  border-radius: 15px;
   border: var(--border-style);
 }
 
@@ -12891,23 +12891,11 @@ body[data-type="comments"] #page-header{
   box-shadow: 0 5px 12px -5px rgba(102,68,68,0);;
   display: flex;
   transition: all 0.3s ease 0s;
-  margin: 1rem auto 0;
   border: 1px solid  #e3e8f7;
   align-items: center;
   height: 50px;
   width: 100%;
   max-width: 1370px;
-}
-@media screen and (max-width: 1400px) {
-  #bbTimeList {
-    max-width: calc(100% - 30px);
-    animation: slide-in 0.6s 0s backwards;
-  }
-}
-@media screen and (max-width: 768px) {
-  div#bbTimeList {
-    margin: 0 20px 15px;
-  }
 }
 [data-theme="dark"] #bbTimeList {
   background: #000 !important;
@@ -12925,16 +12913,16 @@ body[data-type="comments"] #page-header{
   display: flex;
   flex-direction: column;
 }
-i.bber-logo {
-  font-size: 2rem;
-  line-height: 22px;
-  margin-right: 1rem;
+div.bber-logo {
+  width: 40px;
+  min-width: 40px;
+  font-weight: bold;
   transition: all 0.3s ease 0s;
   cursor: pointer !important;
 }
-i.bber-logo:hover,
+div.bber-logo:hover,
 i.bber-gotobb:hover {
-  color:#3b70fc;
+  color:var(--btn-bg);
 }
 
 i.bber-gotobb {
@@ -12957,11 +12945,11 @@ i.bber-gotobb {
   white-space: nowrap;
 }
 #bber-talk .li-style:hover {
-  color:#3b70fc;
+  color:var(--btn-bg);
 }
 
 #bbTimeList:hover {
-  border: 1px solid #3b70fc;
+  border: 1px solid var(--btn-bg);
   box-shadow:  0 8px 12px -3px rgba(66,89,239,0.137);
 }
 
