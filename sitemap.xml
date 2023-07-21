@@ -362,6 +362,13 @@
 
   
   <url>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <lastmod>2023-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/tags/Markdown/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -390,13 +397,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
-    <lastmod>2023-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/tags/Hexo/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,6 +404,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/CSS/</loc>
+    <lastmod>2023-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://wei77777.github.io/categories/Markdown/</loc>
@@ -421,13 +428,6 @@
   
   <url>
     <loc>https://wei77777.github.io/categories/Git/</loc>
-    <lastmod>2023-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/CSS/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
