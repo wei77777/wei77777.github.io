@@ -3632,23 +3632,6 @@ function waterfall(a) {
 
 // 即刻短文JS
 
-function setDataType(){
-  let pathname=window.location.pathname
-  if (pathname=='/') {
-    document.body.dataset.type='WEI'
-  }else{
-    let typeList=pathname.substring(1,pathname.length-1).split('/')
-    let typeName=typeList[typeList.length-1]
-    document.body.dataset.type=typeName
-  }
-}
-
-window.onload = setDataType;
-// 如果使用了pjax在加上下面这行代码
-document.addEventListener('pjax:complete', setDataType);
-
-
-
 // 初始化即刻
 function initIndexEssay () {
   if (!document.getElementById("bbTimeList")) return;
@@ -3675,7 +3658,21 @@ function initIndexEssay () {
     }
   }, 100);
 }
-
-window.onload = initIndexEssay;
 // 如果使用了pjax在加上下面这行代码
 document.addEventListener('pjax:complete', initIndexEssay);
+
+
+function setDataType(){
+  let pathname=window.location.pathname
+  if (pathname=='/') {
+    document.body.dataset.type='WEI'
+  }else{
+    let typeList=pathname.substring(1,pathname.length-1).split('/')
+    let typeName=typeList[typeList.length-1]
+    document.body.dataset.type=typeName
+  }
+}
+
+window.onload = setDataType;
+// 如果使用了pjax在加上下面这行代码
+document.addEventListener('pjax:complete', setDataType);

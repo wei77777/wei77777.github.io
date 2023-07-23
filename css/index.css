@@ -7713,6 +7713,14 @@ blockquote.pullquote.right {
     display: none;
   }
   
+  body[data-type="about"] .author-content .create-site-post {
+    color: #000;
+  }
+
+  [data-theme="dark"] .author-content .create-site-post {
+    color: #fff !important;
+  }
+
   body[data-type="about"] #footer-wrap {
     opacity: 1;
     overflow: visible;
@@ -12979,7 +12987,7 @@ details>summary::-webkit-details-marker {
 }
 
 /* 即刻短文样式 */
-.author-content{
+.single{
   width:100%;
   background-size: cover;
   min-height: 300px;
@@ -13111,6 +13119,8 @@ body[data-type="comments"] #page-header{
 }
 [data-theme="dark"] #bbTimeList {
   background: #000 !important;
+  color: #fff;
+  opacity: 0.9;
 }
 #bbtalk {
   width: 100%;
