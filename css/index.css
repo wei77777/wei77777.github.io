@@ -13104,14 +13104,11 @@ body[data-type="comments"] #page-header{
 
 #bbTimeList {
   font-size: 18px;
-  background: #fff;;
   color: #363636;
   padding: 0.5rem 1rem;
-  border-radius: 12px;
   box-shadow: 0 5px 12px -5px rgba(102,68,68,0);;
   display: flex;
   transition: all 0.3s ease 0s;
-  border: 1px solid  #e3e8f7;
   align-items: center;
   height: 50px;
   width: 100%;
@@ -13197,6 +13194,221 @@ i.bber-gotobb {
   }
 }
 
+:root{
+    --mj-white: #fff;
+    --mj-card-bg: #fff;
+    --mj-theme: #425AEF;
+    --mj-main: #425AEF;
+    --mj-secondbg: #ededed;
+    --mj-card-border: #e3e8f7;
+    --style-border: 1px solid var(--mj-card-border);
+    --style-hover-border: 1px solid var(--mj-theme);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+  color:var(--btn-bg)!important;
+}
+
+#home_top {
+    width: 100%;
+    background: none !important;
+    border: none !important;
+    display: flex;
+}
+.home_top_group {
+    border-radius: 12px;
+    overflow: auto;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#banner_group {
+  width: 400px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+#banners {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--mj-main);
+  margin-bottom: .5rem;
+  margin-right: .5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+#banners:hover{
+  border: var(--style-hover-border);
+}
+
+#banners .grid-img,
+#banners .grid-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.category_group {
+  flex-direction: row !important;
+}
+ .category_item {
+  width: calc(100% / 3 - .33rem);
+  height: 100% !important;
+  margin-right: .5rem;
+}
+ .category_item:nth-child(3) {
+  margin-right: 0;
+  display: flex !important;
+}
+#banner-page {
+  width: 100%;
+  height: 100%;
+}
+.top_post_group {
+  width: calc(100% - 400px);
+}
+.top_post_group .recent-post-item{
+  margin-bottom: 0px;
+}
+.category_group{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ .category_item {
+  overflow: hidden;
+  transform: scale(1);
+  transition: .3s;
+  height: 48%;
+  border-radius: 12px;
+}
+ .category_item:nth-child(3) {
+  display: none;
+}
+ .category_item a.category_button {
+  height: 100%;
+  width: 100%;
+  background: var(--mj-card-bg);
+  border-radius: 12px;
+  display: inline-block;
+  text-align: left;
+  line-height: 4em;
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--mj-white);
+  transition: all .4s cubic-bezier(.39,.575,.565,1);
+  transform: scale(1);
+  overflow: hidden;
+}
+.category_button_text {
+  padding-left: 25px;
+}
+a.category_button i {
+  font-size: 3rem;
+  opacity: .3;
+  position: absolute;
+  right: 10px;
+  top: 15%;
+  transition: .3s;
+  transform: rotate(-10deg);
+}
+a.category_button:hover i {
+  opacity: .8;
+  transition: .8s;
+  transition-delay: .15s;
+  transform: scale(1.1)
+}
+a.category_button:hover:after{
+  width: 3rem;
+  transition: .8s;
+}
+a.category_button:after {
+  top: 40px;
+  width: 1rem;
+  left: 25px;
+  height: 2px;
+  background: var(--mj-white);
+  content: "";
+  border-radius: 1px;
+  position: absolute;
+  transition: .8s;
+}
+#banners .grid-img {
+  overflow: hidden;
+}
+#banners .grid-img img {
+  transition: 0.3s;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#banners:hover .grid-title{
+  opacity: 1;
+  line-height: 1rem;
+}
+#banners:hover .grid-img{
+  filter: blur(5px);
+}
+#banners:hover .grid-mark{
+  transform: translateX(0px);
+  transition: .5s;
+}
+#banners:hover .grid-mark{
+  transform: translateX(-5px);
+  transition: .5s;
+}
+#banners .grid-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: var(--mj-theme);
+  color: var(--mj-white);
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  opacity: 0;
+  transition: .5s;
+}
+#banners .grid-title span {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+#banners .grid-title .grid-mark i {
+  font-size: 2.6rem;
+  opacity: 1;
+  margin: 0 0 5px 15px;
+}
+
+#banners .grid-title .fly {
+  font-size: 3rem;
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  #home_top{
+    display: contents;
+  }
+  #home_top #banner_group{
+    width: 100%;
+    margin-right: 0 !important;
+  }
+  .top_post_group{
+    width: 100%;
+    height: 260px;
+    margin: 10px 0;
+  }
+  .top_post_group .recent-post-item{
+    height: 100% !important;
+  }
+}
 .ipage {
     line-height: 30px;
     margin: 0 auto;

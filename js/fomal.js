@@ -652,7 +652,7 @@ function randomPost() {
     while (true) {
       let url = ls[Math.floor(Math.random() * ls.length)].innerHTML;
       if (location.href == url) continue;
-      location.href = url;
+      pjax.loadUrl(url)
       return;
     }
   })
