@@ -3676,3 +3676,13 @@ function setDataType(){
 window.onload = setDataType;
 // 如果使用了pjax在加上下面这行代码
 document.addEventListener('pjax:complete', setDataType);
+
+
+//判断跳转项目地址还是外链地址
+function flyPage(link){
+  if (link.indexOf('http')!=-1) {
+    window.open(link)
+  }else{
+    pjax.loadUrl(link)
+  }
+}
