@@ -12898,7 +12898,7 @@ details>summary::-webkit-details-marker {
 #icat-bber .icat-bber-content-link:hover {
   background: var(--text-bg-hover);
 }
-#icat-bber .icat-bber-music {
+#icat-bber #icat-bber-music {
   width: 100%;
   height: 90px;
   margin: 0.5rem 0;
@@ -12907,6 +12907,12 @@ details>summary::-webkit-details-marker {
   border: var(--style-border-always);
   background: var(--icat-secondbg);
 }
+
+#icat-bber-video {
+  width: 100%;
+  height: 250px;
+}
+
 #icat-bber .aplayer {
   margin: 0;
 }

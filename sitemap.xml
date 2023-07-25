@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wei77777.github.io/personal/time/index.html</loc>
+    
+    <lastmod>2023-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/posts/f93bb772.html</loc>
     
     <lastmod>2023-07-25</lastmod>
@@ -192,15 +201,6 @@
   
   <url>
     <loc>https://wei77777.github.io/personal/todoList/index.html</loc>
-    
-    <lastmod>2023-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/time/index.html</loc>
     
     <lastmod>2023-07-10</lastmod>
     
@@ -449,14 +449,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/React/</loc>
+    <loc>https://wei77777.github.io/tags/vscode/</loc>
     <lastmod>2023-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/vscode/</loc>
+    <loc>https://wei77777.github.io/tags/React/</loc>
     <lastmod>2023-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -521,14 +521,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/React/</loc>
+    <loc>https://wei77777.github.io/categories/vscode/</loc>
     <lastmod>2023-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/vscode/</loc>
+    <loc>https://wei77777.github.io/categories/React/</loc>
     <lastmod>2023-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
