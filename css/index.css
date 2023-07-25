@@ -13258,7 +13258,10 @@ i.bber-gotobb {
   height: 100% !important;
   margin-right: .5rem;
 }
- .category_item:nth-child(3) {
+.category_item:hover{
+  width: 50%;
+}
+.category_item:nth-child(3) {
   margin-right: 0;
   display: flex !important;
 }
