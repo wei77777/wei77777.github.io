@@ -5854,7 +5854,16 @@ h1.page-title + .tag-cloud-list {
   transform: translate3d(-100%, 0, 0);
 }
 #sidebar #sidebar-menus > .avatar-img {
-  margin: 20px auto;
+  margin: 20px auto 5px auto;
+  border-radius: 25px;
+}
+#sidebar #sidebar-menus > .author-info__name {
+  font-size: 1.65em;
+  font-weight: bold;
+}
+#sidebar #sidebar-menus > .author-info__description {
+  font-size: 1.3em;
+  margin-bottom: 10px;
 }
 #sidebar #sidebar-menus .sidebar-site-data {
   padding: 0 10px;
