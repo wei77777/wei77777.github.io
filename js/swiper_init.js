@@ -17,10 +17,10 @@ var swiper = new Swiper('.blog-slider', {
   });
 var comtainer = document.getElementById('swiper_container');
   if (comtainer !== null) {
-    comtainer.onmouseenter = function() {
+    swiper.el.onmouseenter = function() {
       swiper.autoplay.stop();
     };
-    comtainer.onmouseleave = function() {
+    swiper.el.onmouseleave = function() {
       swiper.autoplay.start();
-      }
+    }
   } else {}
