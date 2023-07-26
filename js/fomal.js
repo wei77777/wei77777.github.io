@@ -3473,7 +3473,7 @@ function createWinbox() {
 <p>&emsp;2.选中心仪的图片右键点击</p>
 <p>&emsp;3.找到设为网站背景按钮点击即可</p>
 <p>&emsp;4.画廊图片适配于手机，电脑端展示效果欠佳</p>
-<button type="button" onclick="pjax.loadUrl('/life/gallery/')" style="background:var(--theme-color);width:25%;padding: 5px 0px 5px 0px;border-radius:30px;color:white;line-height:2;">🌈跳转画廊🌈</button>
+<button type="button" onclick="pjax.loadUrl('/life/gallery/')" style="background:var(--theme-color);width:35%;padding: 5px 0px 5px 0px;border-radius:30px;color:white;line-height:2;">🌈跳转画廊🌈</button>
 <h3>8. 自定义背景</h3>
 <details class="folding-tag" cyan><summary> 设置自定义背景 </summary>
               <div class='content'>
