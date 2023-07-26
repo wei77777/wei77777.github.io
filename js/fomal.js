@@ -995,6 +995,12 @@ function popupMenu() {
         a.click();
         window.URL.revokeObjectURL(url);
       }
+
+      rmf.setBackground = function () {
+        var url = el.src;
+        getPicture(url)
+      }
+
     } else if (el.tagName == "TEXTAREA" || el.tagName == "INPUT") {
       $('#menu-paste').show();
       rmf.paste = function () {
@@ -3214,14 +3220,14 @@ function setBg(s) {
 }
 
 // 切换链接对应的背景(加入了链接检验与防抖)
-function getPicture() {
-  debounce(getPicture_, 300);
+function getPicture(url) {
+  debounce(getPicture_(url), 300);
 }
 
-function getPicture_() {
-  checkImgExists(document.getElementById("pic-link").value).then(() => {
+function getPicture_(url) {
+  checkImgExists(url?url:document.getElementById("pic-link").value).then(() => {
     // 有效的图片链接
-    var link = "url(" + document.getElementById("pic-link").value + ")";
+    var link =`url(${url ? url : document.getElementById("pic-link").value})`
     changeBg(link);
     // 提示切换成功
     new Vue({
@@ -3462,7 +3468,12 @@ function createWinbox() {
               </div>
             </details>
 
-<h3>7. 自定义背景</h3>
+<h3>7. 画廊背景</h3>
+<p>&emsp;1.跳转画廊页面</p>
+<p>&emsp;2.选中心仪的图片右键点击</p>
+<p>&emsp;3.找到设为网站背景按钮点击即可</p>
+<button type="button" onclick="pjax.loadUrl('/life/gallery/')" style="background:var(--theme-color);width:25%;padding: 5px 0px 5px 0px;border-radius:30px;color:white;line-height:2;">🌈跳转画廊🌈</button>
+<h3>8. 自定义背景</h3>
 <details class="folding-tag" cyan><summary> 设置自定义背景 </summary>
               <div class='content'>
               <p><center><input type="text" id="pic-link" size="70%" maxlength="1000" placeholder="请输入有效的图片链接，如 https://source.fomal.cc/img/home_bg.webp"></center></p><p><center><button type="button" onclick="getPicture()" style="background:var(--theme-color);width:35%;padding: 5px 0px 7px 0px;border-radius:30px;color:white;line-height:2;">🌈切换背景🌈</button></center></p>
