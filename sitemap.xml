@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wei77777.github.io/personal/album/index.html</loc>
+    
+    <lastmod>2023-07-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/personal/time/index.html</loc>
     
     <lastmod>2023-07-25</lastmod>
@@ -176,15 +185,6 @@
     <loc>https://wei77777.github.io/personal/records/index.html</loc>
     
     <lastmod>2023-07-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/personal/album/index.html</loc>
-    
-    <lastmod>2023-07-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
