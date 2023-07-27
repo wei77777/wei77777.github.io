@@ -5853,15 +5853,20 @@ h1.page-title + .tag-cloud-list {
   -ms-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-#sidebar #sidebar-menus > .avatar-img {
-  margin: 20px auto 5px auto;
-  border-radius: 25px;
+#sidebar #sidebar-menus > .avatar-box {
+  overflow: hidden;
+  background-position: top;
+  background-size: 120%;
+  background-repeat: no-repeat;
 }
-#sidebar #sidebar-menus > .author-info__name {
+#sidebar #sidebar-menus > .avatar-box > .avatar-img {
+  margin: 20px auto 5px auto;
+}
+#sidebar #sidebar-menus > .avatar-box > .author-info__name {
   font-size: 1.65em;
   font-weight: bold;
 }
-#sidebar #sidebar-menus > .author-info__description {
+#sidebar #sidebar-menus > .avatar-box > .author-info__description {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
@@ -13904,6 +13909,35 @@ body.dark .ipage {
     padding: 2px 4px 2px 6px;
     border-radius: 8px;
   }
+
+
+#card-love{
+  display: flex;
+  flex-direction: column;
+  min-height: 130px;
+}
+
+#card-love .item-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+#card-love .item-head i{
+  margin: 0 20px 3px 20px;
+}
+
+#card-love .item-content{
+  display: flex;
+  justify-content: space-around;
+}
+
+#card-love .item-content img{
+  width: 4.2rem;
+  border-radius: 50%;
+}
 .my_videos{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
