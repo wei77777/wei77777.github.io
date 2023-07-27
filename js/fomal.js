@@ -785,7 +785,7 @@ if (document.body.clientWidth > 992) {
   $(document).ready(function () {
     //部分自定义
     $("#myscoll").nekoScroll({
-      bgcolor: 'rgb(0 0 0 / .5)', //背景颜色，没有绳子背景图片时有效
+      bgcolor: 'var(--theme-color)', //背景颜色，没有绳子背景图片时有效
       borderRadius: '2em',
       zoom: 0.9
     }

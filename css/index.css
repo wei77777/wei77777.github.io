@@ -4792,7 +4792,7 @@ h1.page-title + .tag-cloud-list {
   color: var(--light-grey);
 }
 #nav a:hover {
-  color: var(--white);
+  color: var(--white) !important;
 }
 #nav #site-name {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
