@@ -12126,22 +12126,23 @@ hr:before {
 .something {
   display: none;
   position: fixed;
-  width: 400px;
-  height: 200px;
-  left: 40%;
+  width: 550px;
+  height: 150px;
+  left: 35%;
   top: 28%;
   background: #000;
   border-radius: 8px;
   z-index: 1010;
   animation: fadenum1 .6s 1;
+  font-family: -apple-system, "IBM Plex Mono", monosapce, 微软雅黑, sans-serif;
 }
 
 .something h2{
   color: #fff;
-  font-size: 4em;
+  font-size: 5em;
   position: absolute;
-  top: 20%;
-  left: 3%;
+  top: 13%;
+  left: 5%;
 }
 
 .something h2:nth-child(1) {
@@ -12152,22 +12153,23 @@ hr:before {
 .something h2:nth-child(2) {
   color: #03a9f4;
   animation: animate 4s ease-in-out infinite;
+  padding-bottom: 20px;
 }
 
 @keyframes animate {
   0%,
   100% {
     clip-path: polygon(
-      0% 45%,
-      16% 44%,
-      33% 50%,
+      0% 25%,
+      16% 30%,
+      33% 40%,
       54% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
+      70% 60%,
+      84% 61%,
+      100% 57%,
       100% 100%,
       0% 100%
-    );
+    )
   }
 
   50% {
@@ -12177,11 +12179,11 @@ hr:before {
       34% 66%,
       51% 62%,
       67% 50%,
-      84% 45%,
-      100% 46%,
+      84% 40%,
+      100% 30%,
       100% 100%,
       0% 100%
-    );
+    )
   }
 }
 
