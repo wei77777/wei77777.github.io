@@ -9596,7 +9596,7 @@ div#archive {
 }
 /* 修复图片出框 */
 .tk-content img {
-  max-width: 100% !important;
+  width: 100% !important;
 }
 /* 修复过长文本出框 */
 .tk-content pre {
@@ -13345,6 +13345,12 @@ div#danmuBtn button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+
+.tk-owo-emotion{
+  max-width: 240px !important;
+  max-height: 240px !important;
 }
 #bbTimeList {
   font-size: 18px;
