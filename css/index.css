@@ -8992,7 +8992,6 @@ blockquote.pullquote.right {
     max-width: 250px;
     width: fit-content;
     min-height: 80px;
-    max-height: 144px;
     margin: 4px 0;
     padding: 8px;
     background: rgba(0, 0, 0, 0.9);
@@ -9050,6 +9049,11 @@ blockquote.pullquote.right {
     overflow: scroll;
 }
 
+.comment-barrage-item .barrageContent img{
+    width: 100%;
+    height: 100%;
+}
+
 .comment-barrage-item .barrageContent:hover {
     color:var(--btn-bg) ;
 }
@@ -9067,6 +9071,40 @@ blockquote.pullquote.right {
     --lyx-white:white;
     --lyx-white-acrylic2:#fffa;
     --lyx-black-acrylic2: #000a;
+}
+
+
+#owo-big {
+    position: fixed;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px #aaa solid;
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+    transform: translate(0, -105%);
+    overflow: hidden;
+    animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);
+}
+
+[data-theme=dark] #owo-big {
+    background-color: #4a4a4a
+}
+
+#owo-big img {
+    width: 100%;
+}
+
+/* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */
+@keyframes owoIn {
+    0% {
+        transform: translate(0, -95%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, -105%);
+        opacity: 1;
+    }
 }
 /* root伪类指定全局颜色 */
 :root {
@@ -13348,7 +13386,7 @@ div#danmuBtn button {
 }
 
 
-.tk-owo-emotion{
+.tk-content .tk-owo-emotion{
   max-width: 240px !important;
   max-height: 240px !important;
 }

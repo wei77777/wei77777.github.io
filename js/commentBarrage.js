@@ -135,7 +135,8 @@ switchCommentBarrage = function () {
     }
 }
 }
-$(".comment-barrage").hover(function(){
+let timer
+$(".comment-barrage").hover(()=>{
     clearInterval(timer);
 },function () {
     timer=setInterval(()=>{
