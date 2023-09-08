@@ -4,7 +4,7 @@
   <url>
     <loc>https://wei77777.github.io/personal/album/landscape/index.html</loc>
     
-    <lastmod>2023-08-04</lastmod>
+    <lastmod>2023-09-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -437,7 +437,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Git/</loc>
+    <loc>https://wei77777.github.io/tags/Echarts/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -451,7 +451,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Echarts/</loc>
+    <loc>https://wei77777.github.io/tags/Git/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -465,14 +465,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/React/</loc>
+    <loc>https://wei77777.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc>
+    <loc>https://wei77777.github.io/tags/React/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -502,7 +502,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Git/</loc>
+    <loc>https://wei77777.github.io/categories/Echarts/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -516,7 +516,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Echarts/</loc>
+    <loc>https://wei77777.github.io/categories/Git/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -537,14 +537,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/React/</loc>
+    <loc>https://wei77777.github.io/categories/H5/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/H5/</loc>
+    <loc>https://wei77777.github.io/categories/React/</loc>
     <lastmod>2023-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
