@@ -29,11 +29,13 @@ const commentBarrageConfig = {
 }
 
 function isInViewPortOfOne (el) {
-    const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight 
-    const offsetTop = el.offsetTop
-    const scrollTop = document.documentElement.scrollTop
-    const top = offsetTop - scrollTop
-    return top <= viewPortHeight
+    if (el) {
+        const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight 
+        const offsetTop = el.offsetTop
+        const scrollTop = document.documentElement.scrollTop
+        const top = offsetTop - scrollTop
+        return top <= viewPortHeight
+    }
 }
 document.onscroll = function() {
     if(commentBarrageConfig.displayBarrage){
@@ -41,7 +43,9 @@ document.onscroll = function() {
         document.getElementsByClassName("comment-barrage")[0].setAttribute("style",`display:none;`)
     }
     else{
-        document.getElementsByClassName("comment-barrage")[0].setAttribute("style","")
+        if (document.getElementsByClassName("comment-barrage")[0]) {
+            document.getElementsByClassName("comment-barrage")[0].setAttribute("style","")
+        }
     }
 }
   }
@@ -56,7 +60,9 @@ function initCommentBarrage(){
         xhr.addEventListener("readystatechange", function() {
           if(this.readyState === 4) {
             commentBarrageConfig.barrageList = commentLinkFilter(JSON.parse(this.responseText).data);
-            commentBarrageConfig.dom.innerHTML = '';
+            if (commentBarrageConfig.dom) {
+                commentBarrageConfig.dom.innerHTML = '';
+            }
           }
         });
         xhr.open("POST", commentBarrageConfig.twikooUrl);

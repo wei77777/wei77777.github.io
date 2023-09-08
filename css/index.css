@@ -12449,6 +12449,9 @@ a.anchor-item:hover{
   #rightside #post-anchor{
       display: none!important;
   }
+  #rightside .switchBarrage{
+    display: none!important;
+  }
 }
 
 
