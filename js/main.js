@@ -221,9 +221,11 @@ document.addEventListener('DOMContentLoaded', function () {
       let str = ''
       const replaceDq = str => str.replace(/"/g, '&quot;') // replace double quotes to &quot;
       arr.forEach(i => {
-        const alt = i.alt ? `alt="${replaceDq(i.alt)}"` : ''
+        let describe=replaceDq(i.alt).split(',')
+        const address=describe[0] ? `<div class="tag-address">${replaceDq(describe[0])}</div>` : ''
+        const alt = describe[1] ? `alt="${replaceDq(describe[1])}"` : ''
         const title = i.title ? `title="${replaceDq(i.title)}"` : ''
-        str += `<div class="fj-gallery-item"><img src="${i.url}" ${alt + title}"></div>`
+        str += `<div class="fj-gallery-item">${address}<img src="${i.url}" ${alt + title}"></div>`
       })
       return str
     }

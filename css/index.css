@@ -6602,6 +6602,28 @@ mjx-container[display],
 #article-container .gallery .fj-gallery .gallery-data {
   display: none;
 }
+#article-container .gallery .fj-gallery .tag-address {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 16px 8px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+  font-size: 12px;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
 #article-container .gallery button {
   display: none;
   margin-top: 25px;
