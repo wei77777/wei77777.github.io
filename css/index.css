@@ -3997,11 +3997,11 @@ h1.page-title + .tag-cloud-list {
   color: #49b1f5 !important;
 }
 .site-data > a .headline {
-  color: var(--font-color);
+  color: #fff;
 }
 .site-data > a .length-num {
   margin-top: -0.32em;
-  color: var(--text-highlight-color);
+  color: #fff;
   font-size: 1.4em;
 }
 @media screen and (min-width: 900px) {
@@ -5873,6 +5873,12 @@ h1.page-title + .tag-cloud-list {
 }
 #sidebar #sidebar-menus .sidebar-site-data {
   padding: 0 10px;
+}
+#sidebar #sidebar-menus .sidebar-site-data > a .headline {
+  color: var(--font-color);
+}
+#sidebar #sidebar-menus .sidebar-site-data > a .length-num {
+  color: var(--font-color);
 }
 #sidebar #sidebar-menus hr {
   margin: 20px auto;
@@ -10381,16 +10387,18 @@ button#go-up:hover #percent {
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/springBg.png);
+  background-image: url(https://img.gejiba.com/images/c56b7a08058dbecf0ef5c082ebbab424.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/aurora.webp);
+  background-image: url(https://img.gejiba.com/images/31562779b48cdb46cfd1df10efe0e9f1.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
-  background-size: 100%;
+  background-size: cover;
 }
 /* 头像呼吸灯 */
 [data-theme="light"] .avatar-img {
