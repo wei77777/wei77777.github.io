@@ -3181,8 +3181,6 @@ function changeBgColor() {
 let bingDayBg = screen.width <= 768 ? "url(https://bing.img.run/m.php)" : "url(https://bing.img.run/1920x1080.php)";
 // 必应历史壁纸API
 let bingHistoryBg = screen.width <= 768 ? "url(https://bing.img.run/rand_m.php)" : "url(https://bing.img.run/rand.php)";
-// EEE.DOG
-let EEEDog = "url(https://api.yimian.xyz/img?type=moe&size=1920x1080)";
 // picsum随机
 let picsum = "url(https://picsum.photos/1920/1080.webp)";
 //  小歪高清壁纸
@@ -3426,7 +3424,7 @@ function createWinbox() {
 <h3>1. 壁纸API</h3>
 <details class="folding-tag" cyan><summary> 查看壁纸API系列背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a><a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a><a id="EEEDogBox" rel="noopener external nofollow" style="background-image: ${EEEDog}" class="box apiBox" onclick="changeBg('${EEEDog}')"></a><a id="picsumBox" rel="noopener external nofollow" style="background-image: ${picsum}" class="box apiBox" onclick="changeBg('${picsum}')"></a><a id="waiBizhiBox" rel="noopener external nofollow" style="background-image: ${waiBizhi}" class="box apiBox" onclick="changeBg('${waiBizhi}')"></a><a id="unsplashBox" rel="noopener external nofollow" style="background-image: ${unsplash}" class="box apiBox" onclick="changeBg('${unsplash}')"></a></div>
+              <div class="bgbox"><a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a><a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a><a id="picsumBox" rel="noopener external nofollow" style="background-image: ${picsum}" class="box apiBox" onclick="changeBg('${picsum}')"></a><a id="waiBizhiBox" rel="noopener external nofollow" style="background-image: ${waiBizhi}" class="box apiBox" onclick="changeBg('${waiBizhi}')"></a><a id="unsplashBox" rel="noopener external nofollow" style="background-image: ${unsplash}" class="box apiBox" onclick="changeBg('${unsplash}')"></a></div>
               </div>
             </details>
 
@@ -3434,7 +3432,7 @@ function createWinbox() {
 <h3>2. 二次元</h3>
 <details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://t.lizi.moe/pc)" class="imgbox" onclick="changeBg('url(https://t.lizi.moe/pc)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.ghser.com/random/pc.php)" class="imgbox" onclick="changeBg('url(https://api.ghser.com/random/pc.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://t.lizi.moe/fj)" class="imgbox" onclick="changeBg('url(https://t.lizi.moe/fj)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://imgapi.xl0408.top/index.php)" class="imgbox" onclick="changeBg('url(https://imgapi.xl0408.top/index.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://www.dmoe.cc/random.php)" class="imgbox" onclick="changeBg('url(https://www.dmoe.cc/random.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.paugram.com/wallpaper/)" class="imgbox" onclick="changeBg('url(https://api.paugram.com/wallpaper/)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://imgapi.xl0408.top/index.php)" class="imgbox" onclick="changeBg('url(https://imgapi.xl0408.top/index.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://www.dmoe.cc/random.php)" class="imgbox" onclick="changeBg('url(https://www.dmoe.cc/random.php)')"></a></div>
               </div>
             </details>
 
@@ -3442,7 +3440,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看美女背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.asxe.vip/whitesilk.php)" class="imgbox" onclick="changeBg('url(https://api.asxe.vip/whitesilk.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.caonm.net/api/zny/index.php)" class="imgbox" onclick="changeBg('url(https://api.caonm.net/api/zny/index.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.caonm.net/api/mnt/index.php)" class="imgbox" onclick="changeBg('url(https://api.caonm.net/api/mnt/index.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.caonm.net/api/bhs/h.php)" class="imgbox" onclick="changeBg('url(https://api.caonm.net/api/bhs/h.php)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.asxe.vip/whitesilk.php)" class="imgbox" onclick="changeBg('url(https://api.asxe.vip/whitesilk.php)')"></a></div>
               </div>
             </details>
 
