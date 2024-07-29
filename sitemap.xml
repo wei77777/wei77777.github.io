@@ -398,6 +398,13 @@
 
   
   <url>
+    <loc>https://wei77777.github.io/tags/Git/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/tags/Markdown/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -426,13 +433,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Git/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/tags/Hexo/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -447,7 +447,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/React/</loc>
+    <loc>https://wei77777.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -461,13 +461,20 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc>
+    <loc>https://wei77777.github.io/tags/React/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/Git/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://wei77777.github.io/categories/Markdown/</loc>
@@ -485,13 +492,6 @@
   
   <url>
     <loc>https://wei77777.github.io/categories/Echarts/</loc>
-    <lastmod>2024-07-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/Git/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -519,7 +519,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/React/</loc>
+    <loc>https://wei77777.github.io/categories/H5/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -533,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/H5/</loc>
+    <loc>https://wei77777.github.io/categories/React/</loc>
     <lastmod>2024-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
