@@ -187,4 +187,4 @@ if (localStorage.getItem("isBarrageToggle") == undefined) {
     localStorage.setItem("isBarrageToggle", "0");
     switchCommentBarrage()
 }
-initCommentBarrage()
+// initCommentBarrage()

@@ -9359,6 +9359,14 @@ center#name-container {
   display: flex !important;
   flex-wrap: wrap;
 }
+
+#nav .menus_items .menus_item:nth-child(5):hover .menus_item_child {
+  display: grid !important;
+  grid-gap: 0px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
 /* 这里的2是代表导航栏的第二个元素，即有子菜单的元素，可以按自己需求修改 */
 .menus_items .menus_item:nth-child(2) .menus_item_child {
   left: -160px;
@@ -9367,14 +9375,13 @@ center#name-container {
   left: -165px;
 }
 .menus_items .menus_item:nth-child(4) .menus_item_child {
-  left: -135px;
+  left: -85px;
 }
 .menus_items .menus_item:nth-child(5) .menus_item_child {
-  left: -50px;
+  left: -120px;
 }
 .menus_items .menus_item:nth-child(6) .menus_item_child {
-  left: -100px;
-  max-width: 320px;
+  left: -175px;
 }
 .menus_items .menus_item:nth-child(7) .menus_item_child {
   left: -175px;

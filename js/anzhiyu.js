@@ -253,5 +253,5 @@ function danmu() {
   }
   document.getElementById('danmuBtn').innerHTML = `<button class="hideBtn" onclick="document.getElementById('danmu').classList.remove('hidedanmu')">显示弹幕</button> <button class="hideBtn" onclick="document.getElementById('danmu').classList.add('hidedanmu')">隐藏弹幕</button>`
 }
-danmu()
-document.addEventListener("pjax:complete", danmu)
+// danmu()
+// document.addEventListener("pjax:complete", danmu)
