@@ -398,7 +398,7 @@
 
   
   <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <loc>https://wei77777.github.io/tags/Git/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -419,14 +419,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Echarts/</loc>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Git/</loc>
+    <loc>https://wei77777.github.io/tags/Echarts/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -440,13 +440,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/vscode/</loc>
-    <lastmod>2024-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -454,7 +447,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>https://wei77777.github.io/tags/vscode/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -467,10 +460,17 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://wei77777.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://wei77777.github.io/categories/CSS/</loc>
+    <loc>https://wei77777.github.io/categories/Git/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -484,14 +484,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Echarts/</loc>
+    <loc>https://wei77777.github.io/categories/CSS/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Git/</loc>
+    <loc>https://wei77777.github.io/categories/Echarts/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -512,13 +512,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/vscode/</loc>
-    <lastmod>2024-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/categories/H5/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -526,7 +519,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://wei77777.github.io/categories/vscode/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -534,6 +527,13 @@
   
   <url>
     <loc>https://wei77777.github.io/categories/React/</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2024-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
