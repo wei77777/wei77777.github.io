@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wei77777.github.io/posts/9fb1443d.html</loc>
+    
+    <lastmod>2025-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/personal/album/hometown/index.html</loc>
     
     <lastmod>2025-07-30</lastmod>
@@ -209,15 +218,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/posts/c73a59f9.html</loc>
-    
-    <lastmod>2025-07-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/tags/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/life/movies/index.html</loc>
+    <loc>https://wei77777.github.io/life/music/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/life/music/index.html</loc>
+    <loc>https://wei77777.github.io/life/movies/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
     
@@ -272,15 +272,6 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/personal/storys/article/1.html</loc>
-    
-    <lastmod>2025-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wei77777.github.io/personal/storys/article/2.html</loc>
     
     <lastmod>2025-07-22</lastmod>
@@ -290,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/personal/storys/article/3.html</loc>
+    <loc>https://wei77777.github.io/personal/storys/article/1.html</loc>
     
     <lastmod>2025-07-22</lastmod>
     
@@ -308,6 +299,15 @@
   </url>
   
   <url>
+    <loc>https://wei77777.github.io/personal/storys/article/3.html</loc>
+    
+    <lastmod>2025-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/life/collect/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/about/index.html</loc>
+    <loc>https://wei77777.github.io/bangumis/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
     
@@ -326,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/bangumis/index.html</loc>
+    <loc>https://wei77777.github.io/about/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
     
@@ -387,6 +387,13 @@
   </url>
   
   <url>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/tags/Markdown/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -401,7 +408,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <loc>https://wei77777.github.io/tags/Git/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -415,7 +422,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Git/</loc>
+    <loc>https://wei77777.github.io/tags/React/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -442,24 +449,10 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://wei77777.github.io/tags/React/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
     <loc>https://wei77777.github.io/categories/Echarts/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/Markdown/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -473,7 +466,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Hexo/</loc>
+    <loc>https://wei77777.github.io/categories/Markdown/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/Git/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -487,7 +487,14 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Git/</loc>
+    <loc>https://wei77777.github.io/categories/React/</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/Hexo/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -509,13 +516,6 @@
   
   <url>
     <loc>https://wei77777.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/React/</loc>
     <lastmod>2025-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
