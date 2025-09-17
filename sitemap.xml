@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/life/movies/index.html</loc>
+    <loc>https://wei77777.github.io/life/music/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/life/music/index.html</loc>
+    <loc>https://wei77777.github.io/life/movies/index.html</loc>
     
     <lastmod>2025-07-22</lastmod>
     
@@ -407,6 +407,27 @@
 
   
   <url>
+    <loc>https://wei77777.github.io/tags/CSS/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/tags/Git/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/tags/Hexo/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://wei77777.github.io/tags/Markdown/</loc>
     <lastmod>2025-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -422,27 +443,6 @@
   
   <url>
     <loc>https://wei77777.github.io/tags/Echarts/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/tags/CSS/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/tags/React/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/tags/Git/</loc>
     <lastmod>2025-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -470,13 +470,41 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/tags/Hexo/</loc>
+    <loc>https://wei77777.github.io/tags/React/</loc>
     <lastmod>2025-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/CSS/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/Git/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/Hexo/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wei77777.github.io/categories/%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://wei77777.github.io/categories/Markdown/</loc>
@@ -487,27 +515,6 @@
   
   <url>
     <loc>https://wei77777.github.io/categories/Echarts/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/CSS/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/React/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/Git/</loc>
     <lastmod>2025-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -535,14 +542,7 @@
   </url>
   
   <url>
-    <loc>https://wei77777.github.io/categories/Hexo/</loc>
-    <lastmod>2025-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wei77777.github.io/categories/%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86/</loc>
+    <loc>https://wei77777.github.io/categories/React/</loc>
     <lastmod>2025-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
