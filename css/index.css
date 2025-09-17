@@ -14301,6 +14301,7 @@ body.dark .ipage {
 #card_girl_video{
   width: 100%;
   height: 280px;
+  object-fit: cover;
 }
 
 #girl_btn_box{
