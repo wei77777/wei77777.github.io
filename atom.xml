@@ -70,34 +70,6 @@
   </entry>
   
   <entry>
-    <title>vscode开发必装插件</title>
-    <link href="https://wei77777.github.io/posts/6cedcbdd.html"/>
-    <id>https://wei77777.github.io/posts/6cedcbdd.html</id>
-    <published>2023-07-25T08:00:00.000Z</published>
-    <updated>2025-07-29T02:41:11.207Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Auto-Close-Tag">Auto Close Tag</h2><p>自动补全 html 标签</p><h2 id="Beautify">Beautify</h2><p>格式化代码</p><h2 id="Bracket-Pair-Colorizer">Bracket Pair Colorizer</h2><p>给括号添加不同的颜色，帮助我们快速找到括号的另一半</p><h2 id="Dracula-Official">Dracula Official</h2><p>一个还不错的主题</p><h2 id="EsLint">EsLint</h2><p>代码检测工具</p><h2 id="Highlight-Matching-Tag">Highlight Matching Tag</h2><p>高亮匹配的标签</p><h2 id="Live-Server">Live Server</h2><p>为静态和动态页面启动具有实时重新加载功能的开发本地服务器。在 html 中右键选择 <code>Open with Live Server</code> 即可打开浏览器</p><h2 id="Path-Intellisense">Path Intellisense</h2><p>路径提示插件，输入<code>./</code>即可快速匹配路径</p><h2 id="REST-Client">REST Client</h2><p>在 vscode 可以像 postment 一样快速测试接口</p><h2 id="vetur">vetur</h2><p>开发 vue 时用来格式化 vue 代码</p><h2 id="vscode-icons">vscode-icons</h2><p>为你的每个文件和文件夹添加一个合适的图表</p><h2 id="韭菜盒子">韭菜盒子</h2><p>在 vscode 里面查看基金和股票信息，还可以通过配置查看今日收益</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Auto-Close-Tag&quot;&gt;Auto Close Tag&lt;/h2&gt;
-&lt;p&gt;自动补全 html 标签&lt;/p&gt;
-&lt;h2 id=&quot;Beautify&quot;&gt;Beautify&lt;/h2&gt;
-&lt;p&gt;格式化代码&lt;/p&gt;
-&lt;h2 id=&quot;Bracket-Pair-Colorizer&quot;</summary>
-      
-    
-    
-    
-    <category term="vscode" scheme="https://wei77777.github.io/categories/vscode/"/>
-    
-    
-    <category term="vscode" scheme="https://wei77777.github.io/tags/vscode/"/>
-    
-  </entry>
-  
-  <entry>
     <title>React技术全家桶全套完整版</title>
     <link href="https://wei77777.github.io/posts/d013be8b.html"/>
     <id>https://wei77777.github.io/posts/d013be8b.html</id>
@@ -197,6 +169,34 @@
     
     
     <category term="小程序" scheme="https://wei77777.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode开发必装插件</title>
+    <link href="https://wei77777.github.io/posts/6cedcbdd.html"/>
+    <id>https://wei77777.github.io/posts/6cedcbdd.html</id>
+    <published>2023-07-25T08:00:00.000Z</published>
+    <updated>2025-07-29T02:41:11.207Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Auto-Close-Tag">Auto Close Tag</h2><p>自动补全 html 标签</p><h2 id="Beautify">Beautify</h2><p>格式化代码</p><h2 id="Bracket-Pair-Colorizer">Bracket Pair Colorizer</h2><p>给括号添加不同的颜色，帮助我们快速找到括号的另一半</p><h2 id="Dracula-Official">Dracula Official</h2><p>一个还不错的主题</p><h2 id="EsLint">EsLint</h2><p>代码检测工具</p><h2 id="Highlight-Matching-Tag">Highlight Matching Tag</h2><p>高亮匹配的标签</p><h2 id="Live-Server">Live Server</h2><p>为静态和动态页面启动具有实时重新加载功能的开发本地服务器。在 html 中右键选择 <code>Open with Live Server</code> 即可打开浏览器</p><h2 id="Path-Intellisense">Path Intellisense</h2><p>路径提示插件，输入<code>./</code>即可快速匹配路径</p><h2 id="REST-Client">REST Client</h2><p>在 vscode 可以像 postment 一样快速测试接口</p><h2 id="vetur">vetur</h2><p>开发 vue 时用来格式化 vue 代码</p><h2 id="vscode-icons">vscode-icons</h2><p>为你的每个文件和文件夹添加一个合适的图表</p><h2 id="韭菜盒子">韭菜盒子</h2><p>在 vscode 里面查看基金和股票信息，还可以通过配置查看今日收益</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Auto-Close-Tag&quot;&gt;Auto Close Tag&lt;/h2&gt;
+&lt;p&gt;自动补全 html 标签&lt;/p&gt;
+&lt;h2 id=&quot;Beautify&quot;&gt;Beautify&lt;/h2&gt;
+&lt;p&gt;格式化代码&lt;/p&gt;
+&lt;h2 id=&quot;Bracket-Pair-Colorizer&quot;</summary>
+      
+    
+    
+    
+    <category term="vscode" scheme="https://wei77777.github.io/categories/vscode/"/>
+    
+    
+    <category term="vscode" scheme="https://wei77777.github.io/tags/vscode/"/>
     
   </entry>
   
